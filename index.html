@@ -6,9 +6,10 @@
 <head>
 
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Size Content to The Viewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/css/splide.min.css">
   <!-- title -->
   <title>cuisine</title>
 
@@ -32,16 +33,17 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-
-
-
 
 </head>
 
 <body>
-<!-- Our icon -->
+
+
+
+
+
+
+  <!-- Our icon -->
   <div style="background-color: #F7F4ED;">
     <div class="container-fluid">
       <div class="row justify-content-center align-items-center ">
@@ -64,7 +66,7 @@
       </a>
 
       <!-- login -->
-      <a class="navbar-brand p- text-muted px-4" href="forms.html">
+      <a class="navbar-brand  text-muted px-4" href="forms.html">
         <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-person"
           viewBox="0 0 16 16">
           <path
@@ -89,27 +91,26 @@
         <ul class="navbar-nav">
           <!-- Breakfast -->
           <li class="nav-item active px-4">
-            <a class="nav-link text-muted " href="breakfast.html">Breakfast <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="breakfast.html">Breakfast <span class="sr-only">(current)</span></a>
           </li>
           <!-- Cake -->
           <li class="nav-item px-4">
-            <a class="nav-link text-muted" href="cake.html">Cake</a>
+            <a class="nav-link " href="cake.html">Cake</a>
           </li>
           <!-- Cupcake -->
-          <li class="nav-item px-4 text-muted">
-            <a class="nav-link text-muted" href="cupcake.html">Cupcake</a>
+          <li class="nav-item px-4 ">
+            <a class="nav-link" href="cupcake.html">Cupcake</a>
           </li>
           <!-- More -->
           <li class="nav-item dropdown px-4">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false" style="color: #587493;">
+              aria-haspopup="true" aria-expanded="false">
               More
             </a>
             <div class="dropdown-menu text-muted" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item" href="#c1">About us</a>
               <a class="dropdown-item" href="#c2">Contact Info</a>
               <a class="dropdown-item" href="#c2">Important link</a>
-
               </a>
             </div>
           </li>
@@ -121,11 +122,14 @@
     <hr>
 
 
-    <div class="container mt-3">
-      <h4 class="ml-2">NEW RECIPES</h4>
+
+
+    <div class="container mt-3 mb-3 ml-5 mr-5">
+
+      <h4 onclick="findRecipe()">
+        NEW RECIPES
+      </h4>
     </div>
-
-
 
     <div class="container-fluid">
       <!-- BREAKFAST -->
@@ -144,9 +148,10 @@
             <video autoplay loop muted class="w-100 h-auto">
               <source src="video/cake.mp4" type="video/mp4">
             </video>
-            
+
           </a>
           <h3 class="text-center text-dark text-decoration-none"> CAKE</h3>
+
         </div>
         <!-- CUPCAKE -->
         <div class="col-sm-4" style="background-color: #F7F4ED;">
@@ -154,7 +159,7 @@
             <video autoplay loop muted class="w-100 h-auto">
               <source src="video/cupcake" type="video/mp4">
             </video>
-            
+
           </a>
           <h3 class="text-center text-dark text-decoration-none "> CUPCAKE</h3>
         </div>
@@ -198,11 +203,11 @@
       <div class="row">
         <div class="col-sm-6">
           <div class="d-flex justify-content-center align-items-center h-100">
-            <video width="100%" height="auto" autoplay loop muted class="custom-video">
+            <video width="100%" height="auto" autoplay loop muted>
               <source src="video/Discover a.mp4" type="video/mp4">
             </video>
           </div>
-         
+
         </div>
         <div class="col-sm-6">
           <p class="bg-light fs-5"
@@ -242,13 +247,13 @@
                   <div class="card-body">
                     <small>
                       <!-- Phone -->
-                      <p class=" text-muted m-3 " style="font-size: 14px;"><em>Phone <svg
+                      <p class=" text-muted m-3 " style="font-size: 15px;"><em>Phone <svg
                             xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-telephone" viewBox="0 0 16 16">
                             <path
                               d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
                           </svg> <strong>: +777 767 57 47</strong></em></p>
-                      <p class="text-muted m-3" style="font-size: 14px;"> <em>Email <svg
+                      <p class="text-muted m-3" style="font-size: 15px;"> <em>Email <svg
                             xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-envelope" viewBox="0 0 16 16">
                             <path
@@ -282,7 +287,7 @@
                     <ul class="list-unstyled">
                       <li>
                         <!-- Facebook -->
-                        <p class="text-muted m-3 " style="color: black;" href="https://www.instagram.com/">
+                        <p class="text-muted m-3 " href="https://www.instagram.com/">
 
                           <em> Facebook: </em>
 
@@ -293,7 +298,7 @@
                       </li>
                       <li>
                         <!-- Instagram -->
-                        <p class="text-muted m-3" style="color: black;">
+                        <p class="text-muted m-3">
 
                           <em> Instagram: </em>
 
@@ -305,7 +310,7 @@
                       </li>
 
                       <li>
-                        <p class="text-muted m-3" style="color: black;" href="https://www.instagram.com/"><em>Skype:
+                        <p class="text-muted m-3" href="https://www.instagram.com/"><em>Skype:
                           </em>
                           <a href="https://www.skype.com/ru/">
                             cuisineConnect
@@ -336,9 +341,10 @@
             everyone can find inspiration and
             confidence in their own culinary
             abilities.
-            Get ready for an adventure in a world of tastes and aromas that we will be happy to share with you.</p>
+            Get ready for an adventure in a world of tastes and aromas that we will be happy to share with you.
+          </p>
         </div>
-
+      
         <div class="col-sm-6 ">
           <div class="d-flex justify-content-center align-items-center h-100">
             <video width="100%" height="auto" autoplay loop muted>
@@ -349,8 +355,11 @@
         <hr>
       </div>
     </div>
-
-
+    <p style="background-color: #F7F4ED; font-family: 'Open Sans', sans-serif; font-size:15px; margin:10px 20px 30px 20px; padding: 50px 20px 50px 20px">
+      Did our website meet your expectations?      Please respond with yes or no:      <input type="text" onchange="if (this.value === 'no') { prompt('Thank you for your candor. I want to know how to make your experience better. Please share what can be improved. '); } else { alert('Thank you'); }">
+    </p>
+   
+    
     <div class="container-fluid" style="background-color: #F7F4ED;">
       <hr>
       <div class="row">
@@ -360,19 +369,23 @@
             blog
             to stay up to date with the latest news and recipes.
           </p>
+
         </div>
       </div>
-    
+
     </div>
+    
 
     <footer class="bg-light text-center text-lg-start">
-      <div class="text-center p-3" >
-        ©  2023 Cuisine - All rights reserved. Privacy Policy | Terms of Use
+      <div class="text-center p-3">
+        © 2023 Cuisine - All rights reserved. Privacy Policy | Terms of Use
       </div>
 
     </footer>
    
-  
-  </body>
+    
+
+    <script src="index.js"></script>
+</body>
+
 </html>
-   
