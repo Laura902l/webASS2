@@ -119,9 +119,7 @@ function showMessages() {
       }
   }
 }
-function updateSuccessCounter() {
-  document.getElementById("successCount").textContent = successCounter;
-}
+
 
 
 
