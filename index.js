@@ -1,414 +1,195 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<!-- Hearder -->
-
-<head>
-
-  <meta charset="UTF-8">
-  <!-- Size Content to The Viewport -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="styles.css">
-
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/css/splide.min.css">
-  <!-- title -->
-  <title>cuisine</title>
-
-  <!-- favicon -->
-  <link rel="icon" href="favicon.ico">
-  <!-- font -->
-  <link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet'
-    type='text/css'>
-  <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
-  <!-- social icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-
-</head>
-
-<body>
-
-
-
-
-
-
-  <!-- Our icon -->
-  <div style="background-color: #F7F4ED;">
-    <div class="container-fluid">
-      <div class="row justify-content-center align-items-center ">
-        <div class="col-sm-6">
-          <a href="index.html"><img src="photo/Our icon.png" alt="" width="90%"></a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-     <!-- Navigation bar -->
-     <div class="container-fluid ">
-
-      <nav class="navbar navbar-expand-lg navbar-light bg-white">
-          <!-- Home -->
-          <a class="navbar-brand px-4 ml-5" href="index.html">
-              Home
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" fill="currentColor" class="bi bi-house"
-                  viewBox="0 0 16 16">
-                  <path
-                      d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z" />
-              </svg>
-          </a>
-
-          <!-- login -->
-          <a class="navbar-brand  px-4" hrefforms.html">
-              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-person"
-                  viewBox="0 0 16 16">
-                  <path
-                      d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
-              </svg>
-          </a>
-
-
-          <!-- dropdown -->
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuL">
-              <a class="dropdown-item text-primary" href="index.html">About us</a>
-              <a class="dropdown-item text-primary" href="#c2">Contact Info</a>
-              <a class="dropdown-item text-primary" href="#c2">Important link</a>
-          </div>
-
-          <!-- button navbar-toggler -->
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarNav">
-
-              <ul class="navbar-nav">
-                  <!-- Breakfast -->
-                  <li class="nav-item active px-4">
-                      <a class="nav-link  " href="breakfast.html">Breakfast <span
-                              class="sr-only">(current)</span></a>
-                  </li>
-                  <!-- Cake -->
-                  <li class="nav-item px-4">
-                      <a class="nav-link " href="cake.html">Cake</a>
-                  </li>
-                  <!-- Cupcake -->
-                  <li class="nav-item px-4 ">
-                      <a class="nav-link " href="cupcake.html">Cupcake</a>
-                  </li>
-                  <!-- More options -->
-                  <li class="nav-item dropdown px-4">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                          aria-haspopup="true" aria-expanded="false">
-                          More
-                      </a>
-                      <div class="dropdown-menu text-muted" aria-labelledby="navbarDropdownMenuLink">
-                          <a class="dropdown-item" href="index.html">About us</a>
-                          <a class="dropdown-item" href="#c2">Contact Info</a>
-                          <a class="dropdown-item" href="#c2">Important link</a>
-                      </div>
-                  </li>
-
-
-                  <li class="nav-item dropdown px-4">
-                      <a class="nav-link" href="store.html">
-                          Shop <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                              class="bi bi-shop" viewBox="0 0 16 16">
-                              <path
-                                  d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z" />
-                          </svg>
-                      </a>
-
-                  </li>
-              </ul>
-          </div>
-
-      </nav>
-
-    <hr>
-
-
-
-
-    <div class="container mt-3 mb-3 ml-5 mr-5">
-
-      <h4 onclick="findRecipe()">
-        NEW RECIPES
-      </h4>
-    </div>
-
-    <div class="container-fluid">
-      <!-- BREAKFAST -->
-      <div class="row">
-        <div class="col-sm-4" style="background-color: #F7F4ED;">
-          <a href="breakfast.html">
-            <video autoplay loop muted class="w-100 h-auto"  >
-              <source src="video/breakfast.mp4" type="video/mp4">
-            </video>
-          </a>
-          <h3 class="text-center text-dark" style="text-decoration: none;">BREAKFAST</h3>
-        </div>
-        <!-- CAKE -->
-        <div class="col-sm-4"  style="background-color: #F7F4ED;">
-          <a href="cake.html">
-            <video autoplay loop muted class="w-100 h-auto">
-              <source src="video/cake.mp4" type="video/mp4">
-            </video>
-
-          </a>
-          <h3 class="text-center text-dark text-decoration-none"> CAKE</h3>
-
-        </div>
-        <!-- CUPCAKE -->
-        <div class="col-sm-4"   style="background-color: #F7F4ED;">
-          <a href="cupcake.html">
-            <video autoplay loop muted class="w-100 h-auto">
-              <source src="video/cupcake" type="video/mp4">
-            </video>
-
-          </a>
-          <h3 class="text-center text-dark text-decoration-none "> CUPCAKE</h3>
-        </div>
-
-      </div>
-    </div>
-
-
-
-
-
-    <!-- Basic content -->
-
-
-    <div class="container mt-3">
-      <div class="row">
-        <!-- <div class="col-sm-2 ">
-          <img src="photo/cap.png" alt="photo bowl" width="150" height="150" class="img-fluid"
-            style="transform: rotate(-14deg); margin-left: 20px; ">
-        </div> -->
-        <div class="col-sm-12">
-          <p  class="fs-3 mt-3" style="color: #587493;   font-family: 'Marck Script', cursive;  " id="c1">
-            Welcome to our culinary site, where the art of baking turns into magic!
-            We are ready to share with you our best recipes and secrets for making delicious desserts.
-          </p>
-        </div>
-        <!-- <div class="col-sm-2">
-          <img src="photo/Bowl.png" alt="photo cap" width="150" height="150" class="img-fluid"
-            style="transform: rotate(-14deg); ">
-        </div> -->
-
-
-
-      </div>
-    </div>
-
-
-    <!-- Main part  -->
-    <div class="container-fluid" style="background-color: #F7F4ED;">
-      <hr class="hr1">
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="d-flex justify-content-center align-items-center h-100">
-            <video width="100%" height="auto" autoplay loop muted>
-              <source src="video/Discover a.mp4" type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-        <div class="col-sm-6">
-          <p class="bg-light fs-5"
-            style="font-family: 'Open Sans', sans-serif; margin:40px 20px 30px 20px; padding: 40px 20px 50px 40px">
-            Prepare a delectable dish alongside us
-            and treat yourself and your
-            cherished ones to an extraordinary
-            culinary delight.
-            Dive into the world of baking with us and start
-            your culinary journey today!
-          </p>
-        </div>
-      </div>
-    </div>
-
-
-    <p id="c2"></p>
-    <!-- accordion -->
-    <div class="content">
-      <div class="container-fluid" style="margin-top: 20px; margin-bottom: 20px;">
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="accordion" id="accordionExample">
-              <div class="card">
-                <div class="card-header" style="background-color: #F7F4ED" id="headingOne">
-                  <h2 class="mb-0">
-                    <!-- Contact Info  -->
-                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                      data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                      <h2 class="text-dark display-2 p-2 mt-2 " style="font-size: 17px;">Contact Info </h2>
-                    </button>
-                  </h2>
-                </div>
-
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                  data-parent="#accordionExample">
-                  <div class="card-body">
-                    <small>
-                      <!-- Phone -->
-                      <p class=" text-muted m-3 " style="font-size: 15px;"><em>Phone <svg
-                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-telephone" viewBox="0 0 16 16">
-                            <path
-                              d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
-                          </svg> <strong>: +777 767 57 47</strong></em></p>
-                      <p class="text-muted m-3" style="font-size: 15px;"> <em>Email <svg
-                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-envelope" viewBox="0 0 16 16">
-                            <path
-                              d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
-                          </svg> <strong>: cuisine@gmail.com</strong></em></p>
-                    </small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-sm-6">
-            <div class="accordion" id="accordionExample3">
-              <div class="card">
-                <div class="card-header" id="headingThree" style="background-color: #F7F4ED">
-                  <h2 class="mb-0">
-                    <!-- Important Link -->
-                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                      data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      <h2 class="text-dark display-2 p-2 mt-2" style="font-size: 17px;">Important Link</h2>
-                    </button>
-                  </h2>
-                </div>
-
-                <div id="collapseThree" class="collapse show" aria-labelledby="headingThree"
-                  data-parent="#accordionExample3">
-                  <div class="card-body">
-                    <!-- Social media -->
-                    <ul class="list-unstyled">
-                      <li>
-                        <!-- Facebook -->
-                        <p class="text-muted m-3 " href="https://www.instagram.com/">
-
-                          <em> Facebook: </em>
-
-                          <a href="https://ru-ru.facebook.com/">
-                            cuisineDelights
-                          </a>
-                        </p>
-                      </li>
-                      <li>
-                        <!-- Instagram -->
-                        <p class="text-muted m-3">
-
-                          <em> Instagram: </em>
-
-                          <a href="https://www.instagram.com/">
-                            @cuisineCreator
-                          </a>
-
-                        </p>
-                      </li>
-
-                      <li>
-                        <p class="text-muted m-3" href="https://www.instagram.com/"><em>Skype:
-                          </em>
-                          <a href="https://www.skype.com/ru/">
-                            cuisineConnect
-                          </a>
-                        </p>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-    <!-- conclusion part -->
-    <div class="container-fluid bg-white">
-      <div class="row">
-        <hr>
-        <div class="col-sm-6 ">
-
-          <p class="fs-5"
-            style="background-color: #F7F4ED; font-family: 'Open Sans', sans-serif; font-size:15px; margin:10px 20px 30px 20px; padding: 50px 20px 50px 20px">
-            We strive to create a place where
-            everyone can find inspiration and
-            confidence in their own culinary
-            abilities.
-            Get ready for an adventure in a world of tastes and aromas that we will be happy to share with you.
-          </p>
-        </div>
-
-        <div class="col-sm-6 ">
-          <div class="d-flex justify-content-center align-items-center h-100">
-            <video width="100%" height="auto" autoplay loop muted>
-              <source src="video/2.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-        <hr>
-      </div>
-    </div>
-    <p
-      style="background-color: #F7F4ED; font-family: 'Open Sans', sans-serif; font-size:15px; margin:10px 20px 30px 20px; padding: 50px 20px 50px 20px">
-      Did our website meet your expectations? Please respond with yes or no: <input type="text"
-        onchange="if (this.value === 'no') { prompt('Thank you for your candor. I want to know how to make your experience better. Please share what can be improved. '); } else { alert('Thank you for your feedback! We are glad to hear that our website met your expectations.'); }">
-    </p>
-
-
-    <div class="container-fluid" style="background-color: #F7F4ED;">
-      <hr>
-      <div class="row">
-        <div class="col-sm-12">
-          <p class="fs-3" style="color: #587493;  font-family: 'Marck Script', cursive; text-align: center;">
-            We are always looking for inspiration and are ready to share it with you. Follow our social networks and
-            blog
-            to stay up to date with the latest news and recipes.
-          </p>
-
-        </div>
-      </div>
-
-    </div>
-
-
-    <footer class="bg-light text-center text-lg-start">
-      <div class="text-center p-3">
-        © 2023 Cuisine - All rights reserved. Privacy Policy | Terms of Use
-      </div>
-
-    </footer>
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
-    <script src="js/index.js"></script>
-</body>
-
-</html>
+
+var splide = new Splide('.splide', {
+  type: 'loop',
+  perPage: 3,
+  focus: 'center',
+});
+
+splide.mount();
+
+
+
+
+
+function findRecipe() {
+
+  let favDrink = prompt("Please select the recipe category: \n\n1 -    CUPCAKE \n2 -   BREAKFAST \n3 -   CAKE");
+  var number = parseInt(favDrink)
+  switch (number) {
+    case 1:
+      window.location.href = "cupcake.html";
+      break;
+    case 2:
+      window.location.href = "breakfast.html";
+      break;
+    case 3:
+      window.location.href = "cake.html";
+      break;
+    default:
+      alert("I have never heard of that one.");
+  }
+
+}
+
+function startTimerPrompt() {
+  const timeOption = prompt("Choose an option:\n1 - Seconds\n2 - Minutes");
+
+  if (timeOption === "1") {
+    const userSeconds = prompt("Enter the number of seconds:");
+
+    if (userSeconds !== null) {
+      const totalSeconds = parseInt(userSeconds);
+
+      if (!isNaN(totalSeconds) && totalSeconds > 0) {
+        const intervals = 2;
+
+        for (let i = 0; i < intervals; i++) {
+          setTimeout(function () {
+            alert(`Left: ${totalSeconds - i * (totalSeconds / intervals)} seconds`);
+          }, i * (totalSeconds / intervals) * 1000);
+        }
+
+        setTimeout(function () {
+          alert('Time is over!');
+        }, totalSeconds * 1000);
+      } else {
+        alert('The entered number of seconds is invalid.');
+      }
+    }
+  } else if (timeOption === "2") {
+    const userMinutes = prompt("Enter the number of minutes:");
+
+    if (userMinutes !== null) {
+      const totalMinutes = parseInt(userMinutes);
+
+      if (!isNaN(totalMinutes) && totalMinutes > 0) {
+        const totalSeconds = totalMinutes * 60;
+        const intervals = 2;
+
+        for (let i = 0; i < intervals; i++) {
+          setTimeout(function () {
+            alert(`Left: ${totalSeconds - i * (totalSeconds / intervals)} seconds`);
+          }, i * (totalSeconds / intervals) * 1000);
+        }
+
+        setTimeout(function () {
+          alert('Time is over!');
+        }, totalSeconds * 1000);
+      } else {
+        alert('The entered number of minutes is invalid.');
+      }
+    }
+  } else {
+    alert('Invalid option. Please choose 1 for seconds or 2 for minutes.');
+  }
+}
+
+
+function validateForm(email, password) {
+  if (email === "") {
+    alert("Please enter your email.");
+  } else if (password.length < 6) {
+    alert("Your password should be at least 6 characters long.");
+  } else {
+    alert("Form submitted successfully.");
+  }
+}
+
+
+
+function togglePasswordVisibility(passwordInput) {
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+
+  } else {
+    passwordInput.type = "password";
+
+  }
+
+
+}
+
+
+const messages = [
+  "If you have questions, You can contact, all info given above",
+  "Your lovely Laura and Alikhan",
+
+];
+
+function showMessages() {
+  for (let i = 0; i < messages.length; i++) {
+    if (i === 0) {
+      const userInput = prompt("what did you want to ask??");
+      alert(`We will consider your question: ${userInput}`);
+    } else {
+      alert(messages[i]);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function startTimer(duration) {
+//   const timerElement = document.getElementById("timer");
+//   timerElement.textContent = "Timer: " + (duration / 1000);
+
+//   setTimeout(function () {
+//     timerElement.textContent = "Timer: 0 seconds";
+//     alert('Time is over!!!');
+//   }, duration);
+
+//   const intervalId = setInterval(function () {
+//     const remaining = duration - 1000;
+//     if (remaining < 0) {
+//       clearInterval(intervalId);
+//     } else {
+//       timerElement.textContent = "Timer: " + (remaining / 1000);
+//     }
+//     duration = remaining;
+//   }, 1000);
+// }
+
+
+// function startTimer1(duration) {
+//   const timerElement = document.getElementById("timer1");
+//   timerElement.textContent = "Timer: " + (duration / 1000);
+
+//   setTimeout(function () {
+//     timerElement.textContent = "Timer: 0 seconds";
+//     alert('Time is over!!!');
+//   }, duration);
+
+//   const intervalId = setInterval(function () {
+//     const remaining = duration - 1000;
+//     if (remaining < 0) {
+//       clearInterval(intervalId);
+//     } else {
+//       timerElement.textContent = "Timer: " + (remaining / 1000);
+//     }
+//     duration = remaining;
+//   }, 1000);
+// }
+
+
+
+
+
