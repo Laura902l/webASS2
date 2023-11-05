@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/css/splide.min.css">
 
     <!-- title -->
     <title>cuisine</title>
     <!-- favicon -->
-    <link rel="icon" href="C:\Users\User\.vscode\web_tech11\bakery_img\favicon.ico">
+    <link rel="icon" href="favicon.ico">
     <!-- font -->
     <link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet'
         type='text/css'>
@@ -69,6 +68,7 @@
                 </svg>
             </a>
 
+
             <!-- dropdown -->
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuL">
                 <a class="dropdown-item text-primary" href="index.html">About us</a>
@@ -87,7 +87,8 @@
                 <ul class="navbar-nav">
                     <!-- Breakfast -->
                     <li class="nav-item active px-4">
-                        <a class="nav-link  " href="breakfast.html">Breakfast <span class="sr-only">(current)</span></a>
+                        <a class="nav-link  " href="breakfast.html">Breakfast <span
+                                class="sr-only">(current)</span></a>
                     </li>
                     <!-- Cake -->
                     <li class="nav-item px-4">
@@ -109,8 +110,21 @@
                             <a class="dropdown-item" href="#c2">Important link</a>
                         </div>
                     </li>
+
+
+                    <li class="nav-item dropdown px-4">
+                        <a class="nav-link" href="store.html">
+                            Shop <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-shop" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z" />
+                            </svg>
+                        </a>
+
+                    </li>
                 </ul>
             </div>
+
         </nav>
 
 
@@ -160,23 +174,22 @@
                 <div class="col-sm-8 ">
                     <h3 style="display: inline-block">Directions</h3>
                     <div class="btn btn-dark ml-2" style="float: right;" onclick="startTimerPrompt()">Set a Timer</div>
-          
+
                     <h5>Step 1</h5>
                     <p style="line-height: 40px;">Mix dry ingredients (flour, sugar, baking powder, baking soda, salt)
                         in a large bowl.
                         In a separate bowl, whisk together the wet ingredients (egg, milk, melted butter, and vanilla
                         extract if using).
                         Combine wet ingredients with dry, stirring just until smooth (some lumps are okay).
-                       </p>
+                    </p>
                     <h5>Step 2</h5>
                     <p style="line-height: 40px;">
                         4. Heat a skillet or griddle over medium heat and grease with butter or oil.
-                        Pour 1/4 cup portions of batter onto the skillet and cook <strong onclick="startTimer(2000);" style=" color:rgb(244, 42, 42); display: inline-block;"> 2 min.</strong></p>
-                        <div class="container ">
-                            <button onclick="showMessages()">Do you have a question?</button>
-                        </div>
-                       
-                        <h5 id="timer"></h5>
+                        Pour 1/4 cup portions of batter onto the skillet and cook <strong onclick="startTimer(2000);"
+                            style=" color:rgb(244, 42, 42); display: inline-block;"> 2 min.</strong></p>
+                    
+
+                    <h5 id="timer"></h5>
 
                 </div>
             </div>
@@ -274,7 +287,7 @@
                 </div>
             </div>
         
- <p id="c2"></p>
+ <p id=" c2"></p>
                     <hr style="border: 1.5px solid#587493">
                     <!-- accordion -->
                     <div class="content">
@@ -373,9 +386,10 @@
                                         © 2023 Cuisine - All rights reserved. Privacy Policy | Terms of Use
                                     </div>
                                 </footer>
-
-                                <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
-                                <script src="index.js"></script>
+                            
+                                <script
+                                    src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
+                                <script src="js/index.js"></script>
 </body>
 
 </html>
