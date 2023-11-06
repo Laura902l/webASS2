@@ -64,6 +64,7 @@
       </div>
       <div class="text-muted mt-2 ml-4">Password must include at least one:</div>
       <ul id="password-requirements" class="ml-4 pl-0">
+        <li id="length-req">At least 8 characters</li>
         <li id="lowercase-req">One lowercase character</li>
         <li id="uppercase-req">One uppercase character</li>
         <li id="specialchar-req">One special character (@, %, $, etc.)</li>
@@ -78,45 +79,65 @@
 
     document.getElementById('registrationForm').addEventListener('submit', function (event) {
       event.preventDefault();
-    
+  
       const email = document.getElementById('email').value;
       const password = document.getElementById('pwd').value;
-    
+  
+
+      const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  
       const lowercaseReq = document.getElementById('lowercase-req');
       const uppercaseReq = document.getElementById('uppercase-req');
       const specialcharReq = document.getElementById('specialchar-req');
-    
+      const lengthReq = document.getElementById('length-req');
+  
       const userAccounts = JSON.parse(localStorage.getItem('userAccounts')) || [];
       let isValid = true;
-    
+  
       if (!/[a-z]/.test(password)) {
-        isValid = false;
-        lowercaseReq.style.color = 'red';
+          isValid = false;
+          lowercaseReq.style.color = 'red';
       } else {
-        lowercaseReq.style.color = 'green';
+          lowercaseReq.style.color = 'green';
       }
-    
+  
       if (!/[A-Z]/.test(password)) {
-        isValid = false;
-        uppercaseReq.style.color = 'red';
+          isValid = false;
+          uppercaseReq.style.color = 'red';
       } else {
-        uppercaseReq.style.color = 'green';
+          uppercaseReq.style.color = 'green';
       }
-    
+  
       if (!/[@%$]/.test(password)) {
-        isValid = false;
-        specialcharReq.style.color = 'red';
+          isValid = false;
+          specialcharReq.style.color = 'red';
       } else {
-        specialcharReq.style.color = 'green';
+          specialcharReq.style.color = 'green';
       }
-    
+      if (password.length < 8) {
+        isValid = false;
+        lengthReq.style.color = 'red';
+      }
+      else {
+        lengthReq.style.color = 'green';
+      }
+      
+  
+     
       if (isValid) {
-        userAccounts.push({ email, password });
+        const userAccounts = JSON.parse(localStorage.getItem('userAccounts')) || [];
+        const newUser = { email, password };
+        userAccounts.push(newUser);
         localStorage.setItem('userAccounts', JSON.stringify(userAccounts));
- 
-        window.location.href = 'user.html?email=' + encodeURIComponent(email) + '&password=' + encodeURIComponent(password);
+
+        localStorage.setItem('currentUser', JSON.stringify(newUser));
+
+        alert('Your account has been successfully signed up');
+
+        window.location.href = 'forms.html';
       }
-    });
+  });
+  
     
   </script>
   <script scr="form.js"></script>
