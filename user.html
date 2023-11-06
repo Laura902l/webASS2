@@ -138,17 +138,18 @@
                                         <div class="row pt-1">
                                             <div class="col-6 mb-3">
                                                 <h6>Email</h6>
-                                                <p class="text-muted" id="userEmail">User's Email</p>
+                                                <p class="text-muted" id="userEmail">You do not have an account</p>
                                             </div>
                                             <div class="col-6 mb-3" onclick="toggleVisibility()">
                                                 <h6>Password</h6>
                                                 <div style="background-color: blanchedalmond;">
-                                                    <p class="text-muted password" id="userPassword" style="visibility: hidden;">User's Password</p>
+                                                    <p class="text-muted password" id="userPassword"
+                                                        style="visibility: hidden;">error</p>
                                                 </div>
                                             </div>
 
                                         </div>
-                                        <button>Logout</button>
+                                        <button onclick="logout()">Logout</button>
 
                                         <script>
                                             function toggleVisibility() {
@@ -162,18 +163,42 @@
                                                     }
                                                 }
                                             }
-
-                                            const userAccounts = JSON.parse(localStorage.getItem('userAccounts')) || [];
-
-                                            const user = userAccounts[0];
                                     
-                    
-                                            if (user) {
-                                                document.getElementById('userEmail').textContent = user.email || 'User\'s Email';
-                                                document.getElementById('userPassword').textContent = user.password || 'User\'s Password';
+                                 
+                                    
+                                           
+
+                                            const queryString = window.location.search;
+                                            const urlParams = new URLSearchParams(queryString);
+                                            const userEmail = urlParams.get('email');
+                                            const userPassword = urlParams.get('password');
+                                        
+                                            if (userEmail && userPassword) {
+                                                document.getElementById('userEmail').textContent = userEmail || 'You do not have an account';
+                                                document.getElementById('userPassword').textContent = userPassword || 'error';
                                                 document.getElementById('userPassword').style.visibility = 'visible';
                                             }
+                                        
+                                            function logout() {
+                                                localStorage.setItem("isLoggedIn", "false");
+                                                location.href = "index.html"; 
+                                            }
 
+                                            window.onload = function() {
+                                                var isLoggedIn = localStorage.getItem("isLoggedIn");
+                                                if (isLoggedIn === "true") {
+                                                  var userEmail = localStorage.getItem("userEmail");
+                                                  var userPassword = localStorage.getItem("userPassword");
+                                              
+                                                  document.getElementById('userEmail').textContent = userEmail || 'You do not have an account';
+                                                  document.getElementById('userPassword').textContent = userPassword || 'error';
+                                                  document.getElementById('userPassword').style.visibility = 'visible';
+                                                } else {
+                                                  // Пользователь не авторизован, выполните действия, которые вам нужны
+                                                }
+                                              }
+                                              
+                        
                                         </script>
 
                                     </div>
