@@ -68,7 +68,7 @@
         <li id="uppercase-req">One uppercase character</li>
         <li id="specialchar-req">One special character (@, %, $, etc.)</li>
       </ul>
-      <div class="text-center"><button class="btn btn-dark mt-2">Submit</button></div>
+      <div class="text-center"><button class="btn btn-dark mt-2" onclick="saveDataAndRedirect()">Submit</button></div>
       <ul class="pager">
         <li class="text-center"><a href="index.html">Home</a></li>
       </ul>
@@ -113,7 +113,8 @@
       if (isValid) {
         userAccounts.push({ email, password });
         localStorage.setItem('userAccounts', JSON.stringify(userAccounts));
-        alert('Registration successful!');
+ 
+        window.location.href = 'user.html?email=' + encodeURIComponent(email) + '&password=' + encodeURIComponent(password);
       }
     });
     
