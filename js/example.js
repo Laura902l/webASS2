@@ -228,3 +228,28 @@ var x = setInterval(function () {
     }
 }, 1000);
 
+
+var isLoggedIn = localStorage.getItem("isLoggedIn");
+if (isLoggedIn === "true") {
+    var currentLogin = localStorage.getItem("currentLogin");
+    var userName = localStorage.getItem("userName");
+    
+    if (currentLogin == "user" && userName) {
+        document.getElementById('userName').textContent = "Hello, " + userName;
+        document.getElementById('profileButton').style.display = "block";
+    } else {
+        document.getElementById('userName').textContent = "Hello, User";
+        document.getElementById('profileButton').style.display = "none";
+    }
+    
+    document.getElementById('logoutButton').style.display = "block";
+} else {
+    document.getElementById('userName').textContent = "Hello, User";
+    document.getElementById('profileButton').style.display = "none";
+    document.getElementById('logoutButton').style.display = "none";
+}
+
+function goToProfile() {
+    location.href = "user.html";
+}
+
