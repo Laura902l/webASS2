@@ -127,6 +127,16 @@ function showMessages() {
   }
 }
 
+function goToProfile() {
+  var isLoggedIn = localStorage.getItem("isLoggedIn");
+  if (isLoggedIn === "true") {
+      var userEmail = localStorage.getItem("userEmail");
+      var userPassword = localStorage.getItem("userPassword");
+      window.location.href = 'user.html';
+  } else {
+      alert("You are not logged in. Please log in or create an account.");
+  }
+}
 
 
 
