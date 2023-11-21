@@ -208,24 +208,6 @@ $('.quantity').each(function () {
 
 
 
-// function toggleFormVisibility() {
-//     var form = document.getElementById('order-form');
-//     var button = document.getElementById('button');
-//     var cartTotalElement = document.getElementById("cart-total");
-
-//     if (!cartTotalElement || isNaN(parseFloat(cartTotalElement.textContent))) {
-//         alert("The Basket is empty.");
-//         return;
-//     } else {
-//         if (form.style.display === 'none' || form.style.display === '') {
-//             form.style.display = 'block';
-//             button.style.display = 'none';
-//         } else {
-//             form.style.display = 'none';
-//             button.style.display = 'block';
-//         }
-//     }
-// }
 function toggleFormVisibility() {
     var form = document.getElementById('order-form');
     var button = document.getElementById('button');
@@ -288,17 +270,48 @@ function checkFormFilled() {
 }
 
 
+// function showThankYouAlert() {
+//     if (checkFormFilled()) {
+//         let input = prompt("Are you ready to confirm your purchase?" + "\n1-YES\n2-NO");
+//         if (input === "1") {
+//             const thankYouMessage = "Thanks for your purchase!";
+//             alert(thankYouMessage);
+//         }
+//           // Clear local storage
+//           localStorage.removeItem("cart");
+//           localStorage.removeItem("total");
+        
+//     } 
+// }
 function showThankYouAlert() {
     if (checkFormFilled()) {
         let input = prompt("Are you ready to confirm your purchase?" + "\n1-YES\n2-NO");
         if (input === "1") {
             const thankYouMessage = "Thanks for your purchase!";
             alert(thankYouMessage);
-        }
-        
-    } 
-}
+            localStorage.removeItem("cart");
+            localStorage.removeItem("total");
 
+            $('.quantity_inner .bt_minus').off('click');
+
+
+            $('.bt_plus').off('click');
+
+
+            $('.quantity').off("change keyup input click");
+
+
+            $('.quantity').each(function () {
+                const productName = $(this).data('product-name');
+                localStorage.removeItem(productName);
+                updateQuantityInput($(this), 0);
+            });
+
+
+      
+        }
+    }
+}
 
 function mouseOver(element) {
     element.style.backgroundColor = "#F7F4ED";
