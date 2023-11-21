@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/css/splide.min.css">
+    <!-- title -->
+    <title>cuisine</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- favicon -->
+    <link rel="stylesheet" href="css/store.css">
+    <link rel="icon" href="favicon.ico">
+    <!-- font -->
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet'
+        type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+    <!-- social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+    </div>
+    <!-- our icons -->
+    <div style="background-color: #F7F4ED;">
+        <div class="container-fluid">
+            <div class="row justify-content-center align-items-center ">
+                <div class="col-sm-6">
+                    <a href="index.html"><img src="photo/Our icon.png" alt="" width="100%"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation bar -->
+    <div class="container-fluid ">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <!-- Home -->
+            <a class="navbar-brand px-4 ml-5" href="index.html">
+                Home
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" fill="currentColor" class="bi bi-house"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z" />
+                </svg>
+            </a>
+
+            <!-- login -->
+            <a class="navbar-brand  px-4" href="forms.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-person"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+                </svg>
+            </a>
+
+
+            <!-- dropdown -->
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuL">
+                <a class="dropdown-item text-primary" href="index.html">About us</a>
+                <a class="dropdown-item text-primary" href="#c2">Contact Info</a>
+                <a class="dropdown-item text-primary" href="#c2">Important link</a>
+            </div>
+
+            <!-- button navbar-toggler -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav">
+                    <!-- Breakfast -->
+                    <li class="nav-item active px-4">
+                        <a class="nav-link  " href="breakfast.html">Breakfast <span class="sr-only">(current)</span></a>
+                    </li>
+                    <!-- Cake -->
+                    <li class="nav-item px-4">
+                        <a class="nav-link " href="cake.html">Cake</a>
+                    </li>
+                    <!-- Cupcake -->
+                    <li class="nav-item px-4 ">
+                        <a class="nav-link " href="cupcake.html">Cupcake</a>
+                    </li>
+                    <!-- More options -->
+                    <li class="nav-item dropdown px-4">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            More
+                        </a>
+                        <div class="dropdown-menu text-muted" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="index.html">About us</a>
+                            <a class="dropdown-item" href="#c2">Contact Info</a>
+                            <a class="dropdown-item" href="#c2">Important link</a>
+                            <div id="userSection" class="dropdown-item">
+                                <div type="button" id="profileButton" onclick="goToProfile()">Profile</div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="nav-item dropdown px-4">
+                        <a class="nav-link" href="store.html">
+                            Shop <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-shop" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z" />
+                            </svg>
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+    </div>
+
+    <!-- Main part -->
+    <div class="container-fluid" style="background-color: #ffffff; width: 100%; height: 100%;">
+        <div class="row">
+            <div class="col-sm-4 mt-4">
+                <div class="pt-5 pb-5" style="background-color: #cc8c42;">
+                    <img class="img-thumbnail mx-auto d-flex align-items-center"
+                        style="width:60%; height:300px; margin: auto;" src="product/pint2.jpg" alt="" id="zoom">
+                    <br>
+                    <p class="ml-5"
+                        style="width: 100%; text-align: center; font-family: 'Marck Script', cursive; font-size: 30px; color: #ffffff;">
+
+                        We are waiting for your orders!
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-sm-4 mt-4">
+                <div class="pt-5 pb-5" style="background-color: #e3b681;">
+                    <img class="img-thumbnail mx-auto d-flex align-items-center"
+                        style="width:60%; height:300px; margin: auto;" src="product/pint7.jpg" alt="" id="zoom">
+
+                    <br>
+                    <p
+                        style="width: 100%; text-align: center; font-family: 'Marck Script', cursive; font-size: 30px; color: #ffffff;">
+                        Creams for all your dessert needs.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-sm-4 mt-4">
+                <div class="pt-5 pb-5" style="background-color: #f7f4d9;">
+                    <img class="img-thumbnail mx-auto d-flex align-items-center" style="width:60%; height:300px;    
+                    margin: auto;" src="product/pint3.jpg" alt="" id="zoom">
+                    <br>
+                    <p class="text-center"
+                        style="width: 100%; font-family: 'Marck Script', cursive; font-size: 30px; color: #000000;">
+                        Shop with confidence and quality.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="id01" class="w3-modal" style="z-index:4">
+        <div class="w3-modal-content w3-animate-zoom">
+            <div class="w3-container w3-padding" style="background-color: #F7F4ED;">
+                <span onclick="document.getElementById('id01').style.display='none'"
+                    class="w3-button w3 w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
+
+
+                <!-- Cart Popup Content -->
+
+                <div id="cart-popup" class="cart-popup">
+
+
+                    <h2 class="text-center">Total: <span id="cart-total"></span> тг</h2>
+                    <div id="cart-section">
+
+                        <br>
+                        <ol id="cart-items" style="font-size: 18px; background-color:#ffffff"></ol>
+                        <div class="text-center">
+                            <button id="button" class="btn btn-dark " onclick="toggleFormVisibility()">Checkout</button>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+                <!-- Form Section -->
+                <form id="order-form" style="display: none;">
+                    <!-- Name and Phone Fields -->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Name"
+                                    aria-label="Name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="phone" class="form-label">Phone</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone"
+                                    aria-label="Phone" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dropdown for Pickup/Delivery -->
+                    <select id="pickup-delivery" class="form-select" name="pickup-delivery"
+                        onchange="toggleAddressFields()">
+                        <option value="card">Card</option>
+                        <option value="delivery">Delivery</option>
+                    </select>
+
+                    <br>
+                    <br>
+                    <div id="pickup-address-fields">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="card" class="form-label">Card Number</label>
+                                    <input type="text" class="form-control" id="card" name="card"
+                                        placeholder="Card Number" aria-label="Card Number" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="CVV" class="form-label">CVC</label>
+                                    <input type="text" class="form-control" id="CVV" name="CVV" placeholder="CVC"
+                                        aria-label="CVC" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container" id="address-fields" style="display: none;">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="city" class="form-label">Select a City</label>
+                                <select id="city" class="form-select" name="city" required>
+                                    <option value="Almaty">Almaty</option>
+                                    <option value="Nur-Sultan">Nur-Sultan</option>
+                                    <option value="Shymkent">Shymkent</option>
+                                    <option value="Karaganda">Karaganda</option>
+                                    <option value="Aktobe">Aktobe</option>
+                                    <option value="Taraz">Taraz</option>
+                                    <option value="Pavlodar">Pavlodar</option>
+                                    <option value="Ust-Kamenogorsk">Ust-Kamenogorsk</option>
+                                    <option value="Semey">Semey</option>
+                                    <option value="Atyrau">Atyrau</option>
+                                </select>
+                                <br>
+                                <br>
+                                <label for="street" class="form-label">Street</label>
+                                <input type="text" class="form-control" id="street" name="street" placeholder="Street"
+                                    aria-label="Street" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="apartment" class="form-label">Apartment</label>
+                                <input type="text" class="form-control" id="apartment" name="apartment"
+                                    placeholder="Apartment" aria-label="Apartment" required>
+                                <br>
+                                <br>
+                                <label for="floor" class="form-label">Floor</label>
+                                <input type="text" class="form-control" id="floor" name="floor" placeholder="Floor"
+                                    aria-label="Floor" required>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <p>Delivery will arrive in 5 days</p>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-dark" onclick="showThankYouAlert()">Submit
+                            Order</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+
+    <!-- Welcome -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-11">
+                <p class="fs-3 mt-3"
+                    style="color: #f7fafc; text-align: center; font-family: 'Marck Script', cursive; background-color:#587493; border-radius:10%">
+                    Welcome to our online store of pastry creams and everything you need to decorate your baked goods!
+                </p>
+            </div>
+            <div class="col-sm-1">
+                <button class="btn btn-warning" id="checkout-button"
+                    onclick="document.getElementById('id01').style.display='block'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-cart3" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Filters List -->
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-sm-3">
+                <img class="img-fluid img-custom rounded mx-auto d-block" src="photo/cake.png" alt=""
+                    style="height: 190px;">
+                <div class="filter-list">
+                    <div>
+                        <!-- Replace the existing HTML structure with the new one -->
+                        <div class="filter-checkboxes" id="categoryFilter">
+                            <hr style="border: 1.5px solid#587493">
+                            <div class="nav-link text-center btn  " onmouseover="mouseOverShowAll(this)"
+                                onmouseout="mouseOutShowAll(this)" onclick="filterProducts('all')"
+                                style="background-color: #F7F4ED; color: #000000; font-family: 'Marck Script', cursive; font-size:25px;">
+                                Show All</div>
+                            <hr style="border: 1.5px solid#587493">
+                            <div class="nav-link text-center btn " onmouseover="mouseOverShowAll(this)"
+                                onmouseout="mouseOutShowAll(this)" onclick="filterProducts('Sauce')"
+                                style="background-color: #F7F4ED; color: #000000; font-family: 'Marck Script', cursive; font-size:25px;">
+                                Sauce</div>
+                            <hr style="border: 1.5px solid#587493">
+                            <div class="nav-link text-center btn " onmouseover="mouseOverShowAll(this)"
+                                onmouseout="mouseOutShowAll(this)" onclick="filterProducts('Sprinkles')"
+                                style="background-color: #F7F4ED; color: #000000; font-family: 'Marck Script', cursive; font-size:25px;">
+                                Sprinkles</div>
+                            <hr style="border: 1.5px solid#587493">
+                            <div class="nav-link text-center btn " onmouseover="mouseOverShowAll(this)"
+                                onmouseout="mouseOutShowAll(this)" onclick="filterProducts('skewers')"
+                                style="background-color: #F7F4ED; color: #000000; font-family: 'Marck Script', cursive; font-size:25px;">
+                                Skewers</div>
+                            <hr style="border: 1.5px solid#587493">
+
+                        </div>
+
+                    </div>
+
+                    <div>
+
+                        <!-- filter By Price -->
+                        <div class="filter-by-price">
+                            <hr style="border: 1.5px solid#587493">
+                            <label for="priceRange" class="text-center"
+                                style="font-family: 'Marck Script', cursive; font-size: 25px;">Filter by Price:</label>
+                            <input type="range" id="priceRange" min="0" max="3000" step="5" value="0"
+                                onchange="filterByPriceAll()">
+                            <span id="priceOutput">0</span> KZT
+                            <hr style="border: 1.5px solid#587493">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shopping Basket -->
+                <h3 class="text-center">Shopping Basket</h3>
+                <ol id="list" style="background-color: #f7f4d9; color: #000000; font-size:20px;"></ol>
+                <h3 class="text-center mt-5">Total: <span id="total">0</span></h3>
+            </div>
+
+            <div class="col-sm-9">
+                <div class="row">
+                    <!-- Decor sauce -->
+                    <!-- Calypso caramel -->
+                    <div class="col-sm-3" style="text-align: center; border: 1px solid #000000;"
+                        onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" data-category="Sauce" id="Sauce1"
+                        data-price="990">
+
+                        <img class="mt-4 img-fluid img-custom rounded mx-auto d-block"
+                            src="photo store/декор соус 1.jpeg" style="width:90%" alt="" id="image">
+                        <h4>Decor sauce</h4>
+                        <h6>Calypso caramel 0.75kg</h6>
+                        <br>
+                        <span><strong style="color: red;">990</strong> KZT/piece</span>
+                        <div class="quantity_inner">
+                            <button class="bt_minus">-</button>
+                            <input type="text" class="quantity" data-product-name="Calypso caramel"
+                                data-product-price="990" data-max-count="100" value="0" />
+
+                            <button class="bt_plus">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Kiwi Flavored -->
+                    <div class="col-sm-3" style="text-align: center; border: 1px solid #000000;"
+                        onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" data-category="Sauce" id="Sauce2"
+                        data-price="990">
+                        <img class="mt-4 img-fluid img-custom rounded mx-auto d-block" src="photo store/декор2.jpeg"
+                            alt="" style="width:90%">
+                        <h4>Decor sauce</h4>
+                        <h6>Kiwi Flavored sauce 0.75kg</h6>
+                        <br>
+                        <span><strong style="color: red;">990</strong> KZT/piece</span>
+                        <div class="quantity_inner">
+                            <button class="bt_minus">-</button>
+                            <input type="text" class="quantity" data-product-name="Kiwi Flavored"
+                                data-product-price="990" data-max-count="100" value="0" />
+
+                            <button class="bt_plus">+</button>
+                        </div>
+                    </div>
+                    <!-- Tropical Flavored -->
+                    <div class="col-sm-3" style="text-align: center; border: 1px solid #000000;"
+                        onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" data-category="Sauce" id="Sauce3"
+                        data-price="990">
+                        <img class="mt-4 img-fluid img-custom rounded mx-auto d-block" src="photo store/декор3.jpeg"
+                            alt="" style="width:90%">
+                        <h4>Decor sauce</h4>
+                        <h6>Tropical Flavored 0.75kg</h6>
+                        <br>
+                        <span><strong style="color: red;">990</strong> KZT/piece</span>
+                        <div class="quantity_inner">
+                            <button class="bt_minus">-</button>
+                            <input type="text" class="quantity" data-product-name="Tropical Flavored"
+                                data-product-price="990" data-max-count="100" value="0" />
+
+                            <button class="bt_plus">+</button>
+                        </div>
+                    </div>
+                    <!-- Calypso strawberry  -->
+                    <div class="col-sm-3" style="text-align: center; border: 1px solid #000000;"
+                        onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" data-category="Sauce" id="Sauce4"
+                        data-price="990">
+                        <img class="mt-4 img-fluid img-custom rounded mx-auto d-block" src="photo store/декор4.jpeg"
+                            alt="" style="width:90%">
+                        <h4>Decor sauce</h4>
+                        <h6>Calypso strawberry 0.75kg</h6>
+                        <br>
+                        <span><strong style="color: red;">990</strong> KZT/piece</span>
+                        <div class="quantity_inner">
+                            <button class="bt_minus">-</button>
+                            <input type="text" class="quantity" data-product-name="Calypso strawberry"
+                                data-product-price="990" data-max-count="100" value="0" />
+
+                            <button class="bt_plus">+</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- New product items -->
+                <div class="row">
+                    <!-- Colored sugar -->
+                    <div class="col-sm-3" style="text-align: center; border: 1px solid #587493;"
+                        onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" data-category="Sprinkles"
+                        id="Sprinkles1" data-price="2399">
+                        <img class="mt-4 img-fluid img-custom1 rounded mx-auto d-block" src="photo store/1.jpeg" alt=""
+                            style="width:90%">
+                        <h4>Colored sugar</h4>
+                        <br>
+                        <span><strong style="color: red;">2399</strong> KZT/piece</span>
+                        <div class="quantity_inner">
+                            <button class="bt_minus">-</button>
+                            <input type="text" class="quantity" data-product-name="Colored sugar"
+                                data-product-price="2399" data-max-count="100" value="0" />
+
+                            <button class="bt_plus">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Blue Beads -->
+                    <div class="col-sm-3" style="text-align: center; border: 1px solid #000000;"
+                        onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" data-category="Sprinkles"
+                        id="Sprinkles2" data-price="2399">
+                        <img class="mt-4 img-fluid img-custom1 rounded mx-auto d-block" src="photo store/2.jpeg" alt=""
+                            style="width:90%">
+                        <h4>Blue Beads</h4>
+                        <br>
+                        <span><strong style="color: red;">2399</strong> KZT/piece</span>
+                        <div class="quantity_inner">
+                            <button class="bt_minus">-</button>
+                            <input type="text" class="quantity" data-product-name="Blue Beads" data-product-price="2399"
+                                data-max-count="100" value="0" />
+
+                            <button class="bt_plus">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Yellow Beads -->
+                    <div class="col-sm-3" style="text-align: center; border: 1px solid #000000;"
+                        onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" data-category="Sprinkles"
+                        id="Sprinkles3" data-price="2399">
+                        <img class="mt-4 img-fluid img-custom1 rounded mx-auto d-block" src="photo store/3.jpeg" alt=""
+                            style="width:90%">
+                        <h4>Yellow Beads</h4>
+
+                        <br>
+                        <span><strong style="color: red;">2399</strong> KZT/piece</span>
+                        <div class="quantity_inner">
+                            <button class="bt_minus">-</button>
+                            <input type="text" class="quantity" data-product-name="Yellow Beads"
+                                data-product-price="2399" data-max-count="100" value="0" />
+
+                            <button class="bt_plus">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Pink Beads -->
+                    <div class="col-sm-3" style="text-align: center; border: 1px solid #000000;"
+                        onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" data-category="Sprinkles"
+                        id="Sprinkles4" data-price="2399">
+                        <img class="mt-4 img-fluid img-custom1 rounded mx-auto d-block" src="photo store/4.jpeg" alt=""
+                            style="width:90%">
+                        <h4>Pink Beads</h4>
+
+                        <br>
+                        <span><strong style="color: red;">2399</strong> KZT/piece</span>
+                        <div class="quantity_inner">
+                            <button class="bt_minus">-</button>
+                            <input type="text" class="quantity" data-product-name="Pink Beads" data-product-price="2399"
+                                data-max-count="100" value="0" />
+
+                            <button class="bt_plus">+</button>
+                        </div>
+
+
+
+                      
+                    </div>
+                </div>
+                <!-- New product items: Sprinkles-->
+                <div class="row">
+
+                    <!-- Animal Skewers -->
+                    <div class="col-sm-3" style="text-align: center; border: 1px solid #587493;"
+                        onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" data-category="skewers" id="skewers"
+                        data-price="259">
+                        <img class="mt-4 img-fluid img-custom1 rounded mx-auto d-block" src="photo store/ШПАЖКИ2.webp" alt=""
+                            style="width:90%">
+                        <h4>Animal Skewers</h4>
+                        <br>
+                        <span><strong style="color: red;">259</strong> KZT/piece</span>
+                        <div class="quantity_inner">
+                            <button class="bt_minus">-</button>
+                            <input type="text" class="quantity" data-product-name="Animal Skewers"
+                                data-product-price="259" data-max-count="100" value="0" />
+
+                            <button class="bt_plus">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Blue Skewers -->
+                    <div class="col-sm-3" style="text-align: center; border: 1px solid #000000;"
+                        onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" data-category="skewers" id="skewers"
+                        data-price="99">
+                        <img class="mt-4 img-fluid img-custom1 rounded mx-auto d-block" src="photo store/ШПАЖКИ3.webp" alt=""
+                            style="width:90%">
+                        <h4>Blue Skewers</h4>
+
+                        <br>
+                        <span><strong style="color: red;">99</strong> KZT/piece</span>
+                        <div class="quantity_inner">
+                            <button class="bt_minus">-</button>
+                            <input type="text" class="quantity" data-product-name="Blue Skewers" data-product-price="99"
+                                data-max-count="100" value="0" />
+
+                            <button class="bt_plus">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Zoo Skewers -->
+                    <div class="col-sm-3" style="text-align: center; border: 1px solid #000000;"
+                        onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" data-category="skewers" id="skewers"
+                        data-price="259">
+                        <img class="mt-4 img-fluid img-custom1 rounded mx-auto d-block" src="photo store/ШПАЖКИ.webp" alt=""
+                            style="width:90%">
+                        <h4>Zoo Skewers</h4>
+                        <br>
+                        <span><strong style="color: red;">259</strong> KZT/piece</span>
+                        <div class="quantity_inner">
+                            <button class="bt_minus">-</button>
+                            <input type="text" class="quantity" data-product-name="Zoo Skewers" data-product-price="259"
+                                data-max-count="100" value="0" />
+
+                            <button class="bt_plus">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Pink Skewers -->
+                    <div class="col-sm-3" style="text-align: center; border: 1px solid #000000;"
+                        onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" data-category="skewers" id="skewers"
+                        data-price="99">
+                        <img class="mt-4 img-fluid img-custom1 rounded mx-auto d-block" src="photo store/ШПАЖКИ4.webp" alt=""
+                            style="width:90%">
+                        <h4>Pink Skewers</h4>
+                        <br>
+                        <span><strong style="color: red;">99</strong> KZT/piece</span>
+                        <div class="quantity_inner">
+                            <button class="bt_minus">-</button>
+                            <input type="text" class="quantity" data-product-name="Pink Skewers" data-product-price="99"
+                                data-max-count="100" value="0" />
+
+                            <button class="bt_plus">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+
+    <!-- sale -->
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-sm-5" style="background-color: #F7F4ED;">
+                <img style="width:400px; height:500px" class="mt-4 img-fluid  rounded mx-auto d-block"
+                    src="product/pint6.jpg" alt="">
+
+                <p style="width: 100%; font-family: 'Marck Script', cursive; font-size: 50px; color: #000000;"
+                    id="demo"></p>
+            </div>
+
+
+            <div class="col-sm-2" style="background-color: #F7F4ED;">
+                <div class="text-center"
+                    style="width: 100%; font-family:Georgia, 'Times New Roman', Times, serif, sans-serif, cursive; font-size: 80px; color: #000000; ">
+                    S</div>
+                <br>
+                <div class="text-center"
+                    style="width: 100%; font-family:Georgia, 'Times New Roman', Times, serif, sans-serif, cursive; font-size: 80px; color: #000000;">
+                    A</div>
+                <br>
+                <div class="text-center"
+                    style="width: 100%; font-family:Georgia, 'Times New Roman', Times, serif, sans-serif, cursive; font-size: 80px; color: #000000;">
+                    L</div>
+                <br>
+                <div class="text-center"
+                    style="width: 100%; font-family:Georgia, 'Times New Roman', Times, serif, sans-serif, cursive;font-size: 80px; color: #000000;">
+                    E</div>
+
+            </div>
+
+            <div class="col-sm-1" style="background-color: #F7F4ED;"></div>
+
+
+            <div class="col-sm-4">
+                <div class="splide" id="splide-2">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+
+                            <!-- Food dyes -->
+                            <li class="splide__slide mb-4" style="text-align: center; border: 1px solid #587493;"
+                                onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+                                <img class="mt-3 img-fluid rounded mx-auto d-block" src="photo store/19.jpeg" alt=""
+                                    style="height: 300px;">
+                                <br>
+                                <h4>Food dyes</h4>
+                                <br>
+                                <h6 style="font-size: 20px;"><s>2600</s> <span
+                                        class="wdp-ribbon wdp-ribbon-two">50%</span>
+                                    <h6 style="font-size: 30px;" class="i">1300</h6>
+                                </h6>
+                                <p class="mx-auto text-center" style="text-align: center; width: 80%;">
+                                    Parfait dyes are intended for coloring creams (butter, protein,
+                                    custard), mousses, jellies,
+                                    marmalades, jams. </p>
+                                <div class="quantity_inner">
+                                    <button class="bt_minus">-</button>
+                                    <input type="text" class="quantity" data-product-name="Food dyes"
+                                        data-product-price="1300" data-max-count="100" value="0" />
+
+                                    <button class="bt_plus">+</button>
+                                </div>
+                            </li>
+
+                            <!-- Pastry pencils -->
+                            <li class="splide__slide mb-4" style="text-align: center; border: 1px solid #000000;"
+                                onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+                                <img class="mt-3 img-fluid rounded mx-auto d-block" src="photo store/13.jpeg" alt=""
+                                    style="height: 300px;">
+                                <br>
+                                <h4>Pastry pencils</h4>
+                                <br>
+                                <h6 style="font-size: 20px;"><s>2600</s> <span
+                                        class="wdp-ribbon wdp-ribbon-two">50%</span>
+                                    <h6 style="font-size: 30px;" class="i">1300</h6>
+                                </h6>
+                                <p class="mx-auto text-center " style="text-align: center; width: 80%;">
+                                    Colored gel pens provide a convenient, ready-to-use option for adding celebratory
+                                    messages to a wide range of items.</p>
+                                <div class="quantity_inner">
+                                    <button class="bt_minus">-</button>
+                                    <input type="text" class="quantity" data-product-name="Pastry pencils"
+                                        data-product-price="1300" data-max-count="100" value="0" />
+
+                                    <button class="bt_plus">+</button>
+                                </div>
+                            </li>
+
+
+                            <!-- Pink Food dyes -->
+                            <li class="splide__slide mb-4" style="text-align: center; border: 1px solid #587493;"
+                                onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+                                <img class="mt-2 img-fluid rounded mx-auto d-block" src="photo store/12.jpeg" alt=""
+                                    style="height: 300px;">
+                                <br>
+                                <h4>Pink Food dyes</h4>
+                                <br>
+                                <h6 style="font-size: 20px;"><s>2600</s> <span
+                                        class="wdp-ribbon wdp-ribbon-two">50%</span>
+                                    <h6 style="font-size: 30px;" class="i">1300</h6>
+                                </h6>
+                                <p class="mx-auto text-center" style="text-align: center; width: 80%;">
+                                    Colored gel pencils are a ready-made solution for congratulatory
+                                    inscriptions on any product:
+                                    cake, pastry, Easter cake.
+                                </p>
+                                <div class="quantity_inner">
+                                    <button class="bt_minus">-</button>
+                                    <input type="text" class="quantity" data-product-name="Pink Food dyes"
+                                        data-product-price="1300" data-max-count="100" value="0" />
+
+                                    <button class="bt_plus">+</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- conclusion part -->
+    <hr style="border: 1.5px solid#587493">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-sm-12">
+                <p class="fs-3" style="color: #587493; text-align: center; font-family: 'Marck Script', cursive;">
+                    We are always looking for inspiration and are ready to share it with you. Follow our
+                    social
+                    networks
+                    and blog
+                    to stay up to date with the latest news and recipes.
+                </p>
+            </div>
+        </div>
+    </div>
+    <hr style="border: 1.5px solid#587493">
+
+    <div class="container-fluid">
+        <!-- BREAKFAST -->
+        <div class="row">
+            <div class="col-sm-4  " style="background-color: #F7F4ED;">
+                <a href="breakfast.html">
+                    <video autoplay loop muted class="w-100 h-auto">
+                        <source src="video/breakfast.mp4" type="video/mp4">
+                    </video>
+                </a>
+                <h3 class="text-center text-dark" style="text-decoration: none;">BREAKFAST</h3>
+            </div>
+            <!-- CAKE -->
+            <div class="col-sm-4" style="background-color: #F7F4ED;">
+                <a href="cake.html">
+                    <video autoplay loop muted class="w-100 h-auto">
+                        <source src="video/cake.mp4" type="video/mp4">
+                    </video>
+
+                </a>
+                <h3 class="text-center text-dark text-decoration-none"> CAKE</h3>
+
+            </div>
+            <!-- CUPCAKE -->
+            <div class="col-sm-4" style="background-color: #F7F4ED;">
+                <a href="cupcake.html">
+                    <video autoplay loop muted class="w-100 h-auto">
+                        <source src="video/cupcake" type="video/mp4">
+                    </video>
+
+                </a>
+                <h3 class="text-center text-dark text-decoration-none "> CUPCAKE</h3>
+            </div>
+
+        </div>
+    </div>
+
+    <p id="c2"></p>
+
+
+    <p id="c2"></p>
+    <!-- accordion -->
+    <div class="content">
+        <div class="container-fluid" style="margin-top: 20px; margin-bottom: 20px;">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" style="background-color: #F7F4ED" id="headingOne">
+                                <h2 class="mb-0">
+                                    <!-- Contact Info  -->
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        <h2 class="text-dark display-2 p-2 mt-2 " style="font-size: 17px;">Contact Info
+                                        </h2>
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <small>
+                                        <!-- Phone -->
+                                        <p class=" text-muted m-3 " style="font-size: 15px;"><em>Phone <svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                                </svg> <strong>: +777 767 57 47</strong></em></p>
+                                        <p class="text-muted m-3" style="font-size: 15px;"> <em>Email <svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                                                </svg> <strong>: cuisine@gmail.com</strong></em></p>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="accordion" id="accordionExample3">
+                        <div class="card">
+                            <div class="card-header" id="headingThree" style="background-color: #F7F4ED">
+                                <h2 class="mb-0">
+                                    <!-- Important Link -->
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        <h2 class="text-dark display-2 p-2 mt-2" style="font-size: 17px;">Important Link
+                                        </h2>
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapseThree" class="collapse show" aria-labelledby="headingThree"
+                                data-parent="#accordionExample3">
+                                <div class="card-body">
+                                    <!-- Social media -->
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <!-- Facebook -->
+                                            <p class="text-muted m-3 " href="https://www.instagram.com/">
+
+                                                <em> Facebook: </em>
+
+                                                <a href="https://ru-ru.facebook.com/">
+                                                    cuisineDelights
+                                                </a>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <!-- Instagram -->
+                                            <p class="text-muted m-3">
+
+                                                <em> Instagram: </em>
+
+                                                <a href="https://www.instagram.com/">
+                                                    @cuisineCreator
+                                                </a>
+
+                                            </p>
+                                        </li>
+
+                                        <li>
+                                            <p class="text-muted m-3" href="https://www.instagram.com/"><em>Skype:
+                                                </em>
+                                                <a href="https://www.skype.com/ru/">
+                                                    cuisineConnect
+                                                </a>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-white text-center">
+        <div class="text-center p-3">
+            © 2023 Cuisine - All rights reserved. Privacy Policy | Terms
+            of Use
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
+    <script src="js/example.js"></script>
+
+</body>
+</html>

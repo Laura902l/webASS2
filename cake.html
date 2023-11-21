@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/css/splide.min.css">
+
+    <!-- title -->
+    <title>cuisine</title>
+    <!-- favicon -->
+    <link rel="icon" href="C:\Users\User\.vscode\web_tech11\bakery_img\favicon.ico">
+    <!-- font -->
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet'
+        type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+    <!-- social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <!-- our icons -->
+    <div style="background-color: #F7F4ED;">
+        <div class="container-fluid">
+            <div class="row justify-content-center align-items-center ">
+                <div class="col-sm-6">
+                    <a href="index.html"><img src="photo/Our icon.png" alt="" width="90%"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+      <!-- Navigation bar -->
+      <div class="container-fluid ">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <!-- Home -->
+            <a class="navbar-brand px-4 ml-5" href="index.html">
+                Home
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" fill="currentColor" class="bi bi-house"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z" />
+                </svg>
+            </a>
+
+            <!-- login -->
+            <a class="navbar-brand  px-4" href="forms.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-person"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+                </svg>
+            </a>
+
+
+            <!-- dropdown -->
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuL">
+                <a class="dropdown-item text-primary" href="index.html">About us</a>
+                <a class="dropdown-item text-primary" href="#c2">Contact Info</a>
+                <a class="dropdown-item text-primary" href="#c2">Important link</a>
+                <div id="userSection" class="dropdown-item" >
+                    <div type="button" id="profileButton" onclick="goToProfile()">Profile</div>
+                </div>
+            </div>
+
+            <!-- button navbar-toggler -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav">
+                    <!-- Breakfast -->
+                    <li class="nav-item active px-4">
+                        <a class="nav-link  " href="breakfast.html">Breakfast <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <!-- Cake -->
+                    <li class="nav-item px-4">
+                        <a class="nav-link " href="cake.html">Cake</a>
+                    </li>
+                    <!-- Cupcake -->
+                    <li class="nav-item px-4 ">
+                        <a class="nav-link " href="cupcake.html">Cupcake</a>
+                    </li>
+                    <!-- More options -->
+                    <li class="nav-item dropdown px-4">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            More
+                        </a>
+                        <div class="dropdown-menu text-muted" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="index.html">About us</a>
+                            <a class="dropdown-item" href="#c2">Contact Info</a>
+                            <a class="dropdown-item" href="#c2">Important link</a>
+                            <div id="userSection" class="dropdown-item" >
+                                <div type="button" id="profileButton" onclick="goToProfile()">Profile</div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="nav-item dropdown px-4">
+                        <a class="nav-link" href="store.html">
+                            Shop <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-shop" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z" />
+                            </svg>
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+
+
+        <!-- HOMEMADE PANCAKE -->
+        <div id="1"></div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 " style="background-color: #F7F4ED;">
+                    <div class="d-flex justify-content-center align-items-center h-100">
+                        <img src="photo/best-ever chocolate cake.jpeg" alt="Best-Ever Chocolate Cake.jpeg"
+                            style="max-height: 58vh; max-width: 108%; ">
+                    </div>
+
+                </div>
+                <!-- About Best-Ever Chocolate Cake -->
+                <div class="col-sm-6 " style="background-color: #F7F4ED;">
+                    <p class="mt-5" style="text-align: center;">CAKE & DESSERT</p>
+
+                    <h1 class="mt-4" style="text-align: center;"><strong>Best-Ever Chocolate Cake</strong></h1>
+
+                    <p class="mt-4" style="text-align: center;  line-height: 40px; ">
+                        It's a blend of luxurious cocoa powder, creamy Hellman's mayonnaise,
+                        and an exceptionally moist texture that simply dissolves on your palate.
+                        Every slice of this cake is like an enchanting dive into the realm of
+                        pure chocolate delight. This delightful dessert combines the depth of
+                        rich cocoa with the velvety richness of Hellman's mayonnaise, resulting
+                        in a cake that offers a unforgettable flavor experience.
+
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Ingredients -->
+        <div class="container" style="margin-top: 50px; margin-bottom:10px">
+            <div class="row">
+                <div class="col-sm-3 ">
+                    <h3>Ingredients</h3>
+                    <h4>FOR CAKE</h4>
+                    <ul class="list-unstyled">
+
+                        <li><label><input type="checkbox" name="remember "> <strong>1 c.</strong> Nonstick cooking
+                                spray</label>
+                        </li>
+                        <hr>
+
+                        <li><label><input type="checkbox" name="remember "> 3 c. all-purpose flour</label>
+                        </li>
+                        <hr>
+                        <li><label><input type="checkbox" name="remember "> 1/2 c. granulated sugar</label>
+                        </li>
+                        <hr>
+                        <li><label><input type="checkbox" name="remember "> <strong>1 c.</strong> 3/4 c. packed dark
+                                brown
+                                sugar</label></li>
+                        <hr>
+                        <li><label><input type="checkbox" name="remember "> <strong>1 c.</strong>3/4 c. unsweetened
+                                cocoa
+                                powder</label></li>
+                        <hr>
+
+                        <li><label><input type="checkbox" name="remember"> 1 tbsp. baking soda</label></li>
+                        <hr>
+                        <li><label><input type="checkbox" name="remember"> 3/4 c. 3/4 tbsp. kosher salt</label></li>
+                        <hr>
+                        <li><label><input type="checkbox" name="remember"> 1/4 c. Hellmann’s Real Mayonnaise</label>
+                        </li>
+                        <hr>
+                        <li><label><input type="checkbox" name="remember"> 2 tsp. pure vanilla extract</label></li>
+                        <hr>
+                        <li><label><input type="checkbox" name="remember"> 1 tsp. espresso powder</label></li>
+                        <hr>
+                        <li><label><input type="checkbox" name="remember"> 2 sticks unsalted butter, at room
+                                temp</label>
+                        </li>
+                        <hr>
+                        <li><label><input type="checkbox" name="remember"> 3 c. confectioners’ sugar</label></li>
+                        <hr>
+
+                    </ul>
+
+                </div>
+                <!-- Steps -->
+                <div class="col-sm-1 "></div>
+                <div class="col-sm-8 ">
+                    <h3 style="display: inline-block">Directions</h3>
+                    <div class="btn btn-dark ml-2" style="float: right;" onclick="startTimerPrompt()">Set a Timer</div>
+
+                    <h5>Step 1</h5>
+                    <p style="line-height: 40px;">Make cake: Heat oven to 350˚F. Coat 9-by-13-in. pan with nonstick
+                        spray;
+                        line with parchment,
+                        leaving
+                        overhang on 2 long sides; spray parchment.</p>
+
+                    <h5>Step 2</h5>
+                    <p style="line-height: 40px;">
+                        In large bowl, whisk flour, both sugars, cocoa powder, baking soda and salt until no clumps
+                        remain.
+                        In second bowl, whisk warm water, Hellmann’s mayonnaise, vanilla and espresso powder until
+                        smooth.
+                        Make well in dry ingredients and gradually add liquid mixture, whisking constantly until batter
+                        is
+                        smooth.
+                    </p>
+                    <h5>Step 3</h5>
+                    <p style="line-height: 40px;">
+                        Transfer batter to prepared pan, smooth top and bake until wooden pick inserted in center comes
+                        out
+                        clean <strong onclick="startTimer(42000);"
+                            style=" color:rgb(244, 42, 42); display: inline-block;"> 42 min; </strong> then, using
+                        parchment overhangs, transfer cake to wire
+                        rack
+                        to cool completely.
+                    </p>
+                    <h5>Step 4</h5>
+                    <p style="line-height: 40px; display: inline-block;">Meanwhile, make frosting: Using mixer on
+                        medium, beat butter until
+                        smooth. Reduce speed to
+                        low; add confectioners’ sugar, vanilla and salt and mix to combine. Increase speed to
+                        medium
+                        and beat until smooth and creamy, then beat in milk. Spread frosting over cooled cake
+                        and
+                        sprinkle with chocolate chips.
+                    </p>
+                    
+
+                    <h5 id="timer"></h5>
+
+                </div>
+            </div>
+        </div>
+
+
+        <hr style="border: 1.5px solid#587493">
+
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-sm-12">
+                    <p class="fs-3" style="color: #587493; text-align: center; font-family: 'Marck Script', cursive;">
+                        Our site is a place where passion for cooking, inspiration and creativity come together to
+                        create
+                        unique
+                        tastes and unforgettable culinary adventures.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <!-- Gingerbread Bundt Cake -->
+        <div id="2">
+
+            <hr style=" border: 1.5px solid#587493">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-sm-6 " style="background-color: #F7F4ED;">
+
+                        <p class="mt-4" style="text-align: center;">CAKE & DESSERT</p>
+                        <h1 class="mt-4" style="text-align: center;"><strong>Gingerbread Bundt Cake</strong>
+                        </h1>
+
+                        <p class="mt-5" style="text-align: center; line-height: 40px; ">
+                            This cake embodies the flawless blend of comforting, aromatic spices,
+                            soft and delicate pastry, and a sugary glaze that dissolves effortlessly
+                            on your taste buds. Its distinct flavor is a source of delight and solace,
+                            suitable for any occasion. Elevate your get-togethers with loved ones by
+                            introducing this exceptional cake, turning ordinary moments into extraordinary
+                            memories.
+
+                        </p>
+
+                    </div>
+                    <div class="col-sm-6 " style="background-color: #F7F4ED;">
+                        <div class="d-flex justify-content-center align-items-center h-100">
+                            <img src="photo/Gingerbread.jpeg" alt="" style="max-height: 58vh; max-width: 108%; ">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Ingredients -->
+            <div class="container " style="margin-top: 50px; margin-bottom:10px">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h3>Ingredients</h3>
+                        <h4>FOR CAKE</h4>
+                        <ul class="list-unstyled">
+                            <li><label><input type="checkbox" name="remember"> Melted unsalted butter,
+                                    for
+                                    greasing</label></li>
+                            <hr class="horizontal">
+                            <li><label><input type="checkbox" name="remember"> 1/2 c. granulated sugar,
+                                    plus
+                                    more
+                                    for coating pan</label></li>
+                            <hr class="horizontal">
+                            <li><label><input type="checkbox" name="remember"> 3 c. all-purpose
+                                    flour</label>
+                            </li>
+                            <hr class="horizontal">
+                            <li><label><input type="checkbox" name="remember"> 1 tsp. baking
+                                    soda</label></li>
+                            <hr class="horizontal">
+                            <li><label><input type="checkbox" name="remember"> 1 tsp. ground
+                                    ginger</label></li>
+                            <hr class="horizontal">
+                            <li><label><input type="checkbox" name="remember"> 1 tsp. ground
+                                    cinnamon</label>
+                            </li>
+                            <hr class="horizontal">
+                            <li><label><input type="checkbox" name="remember"> 1/2 tsp. ground
+                                    allspice</label>
+                            </li>
+                            <hr class="horizontal">
+                            <li><label><input type="checkbox" name="remember"> 1/2 tsp. freshly grated
+                                    nutmeg</label></li>
+                            <hr class="horizontal">
+                            <li><label><input type="checkbox" name="remember"> 1/4 tsp. freshly ground
+                                    black
+                                    pepper</label></li>
+                            <hr class="horizontal">
+                            <li><label><input type="checkbox" name="remember"> 3/4 c. unsalted butter
+                                    (11/2
+                                    sticks),
+                                    at room temperature</label></li>
+                            <hr class="horizontal">
+                            <li><label><input type="checkbox" name="remember"> 1 tsp. freshly grated
+                                    ginger</label>
+                            </li>
+                            <hr class="horizontal">
+                            <h4>GLAZE</h4>
+                            <li><label><input type="checkbox" name="remember"> 1/4 c. confectioners’
+                                    sugar plus
+                                    more
+                                    if needed, sifted</label></li>
+                            <hr class="horizontal">
+                            <li><label><input type="checkbox" name="remember"> 1/4 c. sour cream</label>
+                            </li>
+                            <hr class="horizontal">
+                            <li><label><input type="checkbox" name="remember"> 1 tbsp. plus 2 teaspoons
+                                    heavy
+                                    cream,
+                                    plus more if needed</label></li>
+                            <hr class="horizontal">
+
+                        </ul>
+
+                    </div>
+                    <div class="col-sm-1 "></div>
+
+                    <!-- STEPS -->
+                    <div class="col-sm-8 ">
+                        <h3 style="display: inline-block">Directions</h3>
+                        <div class="btn btn-dark ml-2" style="float: right;" onclick="startTimerPrompt()">Set a Timer
+                        </div>
+
+
+                        <h5>Step 1</h5>
+                        <p style="line-height: 40px;"> Make cake: Heat oven to 350°F. Grease 91/2-inch
+                            (10-cup)
+                            Bundt pan with melted
+                            butter, then
+                            sprinkle with
+                            granulated sugar, tapping to coat, making sure to get into all ridges.
+                        </p>
+
+                        <h5>Step 2</h5>
+                        <p style="line-height: 40px;"> In medium bowl, whisk together flour, baking
+                            soda, and
+                            spices.
+                        </p>
+                        <h5>Step 3</h5>
+                        <p style="line-height: 40px;">
+                            In stand mixer, beat butter, granulated sugar, and grated ginger on
+                            medium-high
+                            until light and
+                            fluffy. Beat in eggs 1 at a time, scraping bowl after each addition.
+                            Beat in
+                            vanilla.
+                        </p>
+                        <h5>Step 4</h5>
+                        <p style="line-height: 40px;">In 4-cup measuring cup or medium bowl, stir
+                            molasses into
+                            1
+                            cup hot water. With mixer
+                            on low, add
+                            flour
+                            mixture to butter mixture in 3 increments, alternating with molasses
+                            mixture, until
+                            just
+                            combined..
+                        </p>
+                        <h5>Step 5</h5>
+                        <p style="line-height: 40px;">Pour batter into prepared pan and smooth top. Bake
+                            until
+                            toothpick inserted into
+                            center comes out
+                            clean, <strong onclick="startTimer1(45000);"
+                                style=" color:rgb(244, 42, 42); display: inline-block;"> 45 minutes.
+                            </strong>
+                            then,
+                            using parchment overhangs, transfer cake to wire
+                            Let cool in pan on wire rack 20 minutes. Using small
+                            offset
+                            spatula, gently
+                            loosen
+                            edges and invert onto rack. Let cool completely. </p>
+                        <h5>Step 6</h5>
+                        <p style="line-height: 40px;">Meanwhile, make glaze: In medium bowl, whisk
+                            together
+                            confectioners’ sugar, sour
+                            cream, heavy
+                            cream,
+                            vanilla, and salt, adding more confectioners’ sugar or heavy cream if
+                            needed, until
+                            thick and
+                            pourable.
+                        </p>
+                        <h5>Step 7
+                        </h5>
+                        <p style="line-height: 40px;">Pour glaze over cake and garnish with pomegranate
+                            arils
+                            and
+                            freshly cracked black
+                            pepper.
+                        </p>
+                       
+                        <h5 id="timer1"></h5>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr style="border: 1.5px solid#587493">
+    <div class="splide">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide" style="width:450px; background-color: #F7F4ED ">
+                    <a href="cupcake.html"><img class="img-fluid rounded mx-auto d-block " src="photo/cupcake"
+                            style="max-width: 100%;height: 400px;" alt="Image 1">
+                    </a>
+
+                    <br>
+                    <p class="text-center">Lemon-Almond Muffins</p>
+                    <br>
+                </li>
+                <li class="splide__slide" style="width:20px;  background-color: #fcfcfc  ">
+
+                </li>
+                <li class="splide__slide" style="width:450px; background-color: #F7F4ED ">
+                    <a href="breakfast.html">
+                        <img class="img-fluid rounded mx-auto d-block " src="photo/панкейк"
+                            style="max-width: 100%;height: 400px;" alt="Image 2">
+
+                    </a>
+                    <br>
+                    <p class="text-center">HOMEMADE PANCAKE</p>
+                    <br>
+                </li>
+                <li class="splide__slide" style="width:20px;  background-color: #fcfcfc  ">
+
+                </li>
+                <li class="splide__slide" style="width:450px; background-color: #F7F4ED ">
+                    <a href="cake.html#2"><img class="img-fluid rounded mx-auto d-block " src="photo/Gingerbread.jpeg"
+                            style="max-width: 90%; height: 400px;" alt="Image 3">
+                    </a>
+                    <br>
+                    <p class="text-center">Gingerbread Bundt Cake</p>
+                    <br>
+                </li>
+                <li class="splide__slide" style="width:20px;  background-color: #fcfcfc  ">
+
+                </li>
+                <li class="splide__slide " style="width:450px; background-color: #F7F4ED ">
+                    <a href="cake.html#1"><img class="img-fluid rounded mx-auto d-block "
+                            src="photo/best-ever chocolate cake.jpeg" style="max-width: 100%;height: 400px;"
+                            alt="Image 4">
+                    </a>
+                    <br>
+                    <p class="text-center">Best-Ever Chocolate Cake</p>
+
+                    <br>
+                </li>
+                <li class="splide__slide" style="width:20px;  background-color: #fcfcfc  ">
+
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <hr style="border: 1.5px solid#587493">
+    <!-- Main part -->
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-sm-12">
+                <p class="fs-3" style="color: #587493; text-align: center; font-family: 'Marck Script', cursive;">
+                    We are always looking for inspiration and are ready to share it with you. Follow our
+                    social
+                    networks
+                    and blog
+                    to stay up to date with the latest news and recipes.
+                </p>
+            </div>
+        </div>
+    </div>
+    <p id="c2"></p>
+    <hr style="border: 1.5px solid#587493">
+    <!-- accordion -->
+
+    <div class="content">
+        <div class="container-fluid" style="margin-top: 20px; margin-bottom: 20px;">
+            <div class="row">
+                <div class="col-sm-6" style="background-color:rgb(255, 255, 255);">
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" style="background-color: #F7F4ED" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        <h2 class="text-dark display-2 p-2 mt-2" style="font-size: 17px;">
+                                            Contact
+                                            Info </h2>
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                data-parent="#accordionExample">
+                                <div class="card-body"><small>
+                                        <!-- Phone -->
+                                        <p class=" text-muted m-3 " style="font-size: 15px;">
+                                            <em>Phone <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                                </svg> <strong>: +777 767 57 47</strong></em>
+                                        </p>
+                                        <!-- Email -->
+                                        <p class="text-muted m-3" style="font-size: 15px;">
+                                            <em>Email <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                                                </svg> <strong>: cuisine@gmail.com</strong></em>
+                                        </p>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 bg-white">
+                    <div class="accordion" id="accordionExample3">
+                        <div class="card">
+                            <div class="card-header" id="headingThree" style="background-color: #F7F4ED">
+                                <h2 class="mb-0">
+                                    <!-- Important Link -->
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        <h2 class="text-dark display-2 p-2 mt-2" style="font-size: 17px;">
+                                            Important
+                                            Link</h2>
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapseThree" class="collapse show" aria-labelledby="headingThree"
+                                data-parent="#accordionExample3">
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <!-- Facebook -->
+                                        <li>
+                                            <p class="text-muted m-3 " href="https://www.instagram.com/">
+                                                <em> Facebook: </em>
+                                                <a href="https://ru-ru.facebook.com/">cuisineDelights</a>
+                                            </p>
+                                        </li>
+                                        <!-- Instagram -->
+                                        <li>
+                                            <p class="text-muted m-3"><em> Instagram: </em>
+                                                <a href="https://www.instagram.com/">@cuisineCreator</a>
+                                            </p>
+                                        </li>
+                                        <!-- Skype -->
+                                        <li>
+                                            <p class="text-muted m-3" href="https://www.instagram.com/">
+                                                <em>Skype:
+                                                </em>
+                                                <a href="https://www.skype.com/ru/">cuisineConnect</a>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        <footer class="bg-white text-center">
+            <div class="text-center p-3">
+                © 2023 Cuisine - All rights reserved. Privacy Policy | Terms of Use
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
+        <script src="js/index.js"></script>
+</body>
+
+</html>
