@@ -1,0 +1,130 @@
+/* Sale */
+.wdp-ribbon {
+  display: inline-block;
+  padding: 2px 15px;
+
+  top: 1830px;
+  line-height: 24px;
+  height: 24px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+  border-radius: 0;
+  text-shadow: none;
+  font-weight: normal;
+  background-color: #ff1e1e !important;
+  rotate:35deg;
+  
+}
+
+.wdp-ribbon-two:before,
+.wdp-ribbon-two:before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  left: -14px;
+  top: 0;
+  border: 9px solid transparent;
+  border-width: 14px 8px;
+  border-right-color: #ff1e1e;
+}
+
+.wdp-ribbon-two:before {
+  border-color: #ff1e1e;
+  border-left-color: transparent !important;
+  left: -9px;
+}
+
+.i{
+  position: relative;
+  bottom:10px;
+  
+}
+
+
+/* zoom */
+#zoom {
+  padding: 5px;
+  transition: transform .2s;
+
+
+}
+#zoom:hover {
+  -ms-transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  transform: scale(1.1);
+}
+
+
+form {
+  width: 100%;
+
+}
+
+#checkout-button {
+
+  font-size: 24px;
+  padding: 10px 20px;
+
+}
+
+#checkout-button svg {
+  width: 45px;
+  height: 37px;
+}
+
+
+
+input {
+  height: 34px;
+  width: 100px;
+  text-align: center;
+  font-size: 26px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.bt_minus {
+  background-color: #f05454;
+  border: none;
+  color: white;
+  margin-top: 14px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 9px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 20%;
+}
+
+.bt_plus {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  margin-top: 14px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 9px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 20%;
+}
+
+#demo {
+  text-align: center;
+  font-size: 50px;
+
+}
+
+#content-container {
+  display: none;
+}
