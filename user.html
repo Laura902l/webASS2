@@ -240,19 +240,54 @@
 
     <script>
         function toggleVisibility() {
-            var passwordElements =
-                document.getElementsByClassName("password");
+            var passwordElements = document.getElementsByClassName("password");
             for (var i = 0; i < passwordElements.length; i++) {
                 var passwordElement = passwordElements[i];
-                if (
-                    passwordElement.style.visibility === "hidden"
-                ) {
+                if (passwordElement.style.visibility === "hidden") {
                     passwordElement.style.visibility = "visible";
                 } else {
                     passwordElement.style.visibility = "hidden";
                 }
             }
         }
+        
+
+       
+        function login() {
+            // Get the entered email and password from the login form
+            var enteredEmail = document.getElementById("loginEmail").value;
+              //var enteredPassword = document.getElementById("loginPassword").value;
+            
+        
+            // Check if the entered email exists in local storage
+            var storedUserEmail = localStorage.getItem("userEmail");
+             // var password = localStorage.getItem("password");
+            
+        
+            if (storedUserEmail === enteredEmail) {
+                // Email and password match, retrieve and display user information
+                var storedUserName = localStorage.getItem("userName");
+                var storedUserSurname = localStorage.getItem("userSurname");
+                var storedUserBirthdate = localStorage.getItem("userBirthdate");
+                var storedUserPassword = localStorage.getItem("userPassword");
+        
+                // Display user details
+                document.getElementById("userName").textContent = storedUserName || "User's Name";
+                document.getElementById("userSurname").textContent = storedUserSurname || "User's Surname";
+                document.getElementById("userEmail").textContent = storedUserEmail || "You do not have an account";
+                document.getElementById("userPassword").textContent = password || "error";
+                document.getElementById("userPassword").style.visibility = "visible";
+                document.getElementById("userBirthdate").textContent = storedUserBirthdate || "User's bday";
+        
+               
+                localStorage.setItem("isLoggedIn", "true");
+            } else {
+                
+                alert("Invalid email or password. Please try again.");
+               
+            }
+        }
+        
 
         window.onload = function () {
             var isLoggedIn = localStorage.getItem("isLoggedIn");
@@ -264,48 +299,20 @@
                 var userBirthdate = localStorage.getItem("userBirthdate");
 
                 // Display user details
-                document.getElementById("userName").textContent =
-                    userName || "User's Name";
-                document.getElementById("userSurname").textContent =
-                    userSurname || "User's Surname";
-                document.getElementById("userEmail").textContent =
-                    userEmail || "You do not have an account";
-                document.getElementById("userPassword").textContent =
-                    userPassword || "error";
+                document.getElementById("userName").textContent = userName || "User's Name";
+                document.getElementById("userSurname").textContent = userSurname || "User's Surname";
+                document.getElementById("userEmail").textContent = userEmail || "You do not have an account";
+                document.getElementById("userPassword").textContent = userPassword || "error";
                 document.getElementById("userPassword").style.visibility = "visible";
-                document.getElementById("userBirthdate").textContent =
-                    userBirthdate || "User's bday";
+                document.getElementById("userBirthdate").textContent = userBirthdate || "User's bday";
+                displayPurchaseHistory();
+
             }
         };
-        document.addEventListener("DOMContentLoaded", function () {
-            // Получение данных из localStorage
-            const purchaseData = JSON.parse(localStorage.getItem("purchaseData"));
+    
+   
 
-            if (purchaseData) {
-                // Используйте данные по вашему усмотрению
-                const cart = purchaseData.cart;
-                const total = purchaseData.total;
-                const timestamp = purchaseData.timestamp;
-                const formattedTimestamp = new Date(timestamp).toLocaleString();
-
-                // Отобразите данные на странице, например:
-                const purchaseDataDiv = document.getElementById("purchaseData");
-                purchaseDataDiv.innerHTML = `
-
-
-                    <h2 h2 style = " text-align: center " > Your purchase history </h2 >
-                        <hr>
-
-                            <p style="font-size: 20px; text-align: center "> Total: <strong>${total} KZT </strong></p>
-                            <ul style="font-size: 20px;">
-                                <p>Date:    <strong> ${formattedTimestamp} </strong></p>
-                                ${Object.keys(cart).map(productName => `<li> <p>Product name:  ${productName} x${cart[productName].quantity}</p> Price: ${cart[productName].total.toFixed(0)} KZT</li>  <br> <hr>`).join('')}
-                            </ul>`;
-
-            } 
-            }
-
-        );
+        
 
    
 
