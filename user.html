@@ -1,24 +1,25 @@
+,,,
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/css/splide.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/css/splide.min.css" />
 
     <!-- title -->
     <title>cuisine</title>
     <!-- favicon -->
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico" />
     <!-- font -->
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet'
-        type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700" rel="stylesheet"
+        type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet" />
     <!-- social icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -28,22 +29,26 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <style>
+        .user-photo {
+            max-width: 100%;
+            height: auto;
 
-
+        }
+    </style>
 </head>
 
-<body>
+<body style="background-color: #f7f4ed;" onload="loadPurchaseData()">
     <!-- our icons -->
-    <div style="background-color: #F7F4ED;">
+    <div style="background-color: #f7f4ed">
         <div class="container-fluid">
-            <div class="row justify-content-center align-items-center ">
+            <div class="row justify-content-center align-items-center">
                 <div class="col-sm-6">
-                    <a href="index.html"><img src="photo/Our icon.png" alt="" width="90%"></a>
+                    <a href="bakery.html"><img src="photo/Our icon.png" alt="" width="90%" /></a>
                 </div>
             </div>
         </div>
     </div>
-
 
     <!-- Navigation bar -->
     <div class="container-fluid ">
@@ -60,7 +65,7 @@
             </a>
 
             <!-- login -->
-            <a class="navbar-brand  px-4" href="forms.html">
+            <a class="navbar-brand  px-4" onclick="goToProfile()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-person"
                     viewBox="0 0 16 16">
                     <path
@@ -74,6 +79,9 @@
                 <a class="dropdown-item text-primary" href="index.html">About us</a>
                 <a class="dropdown-item text-primary" href="#c2">Contact Info</a>
                 <a class="dropdown-item text-primary" href="#c2">Important link</a>
+                <div id="userSection" class="dropdown-item">
+                    <div type="button" id="profileButton" onclick="goToProfile()">Profile</div>
+                </div>
             </div>
 
             <!-- button navbar-toggler -->
@@ -99,6 +107,7 @@
                     </li>
 
 
+
                     <li class="nav-item dropdown px-4">
                         <a class="nav-link" href="store.html">
                             Shop <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -113,97 +122,94 @@
             </div>
 
         </nav>
-        <div class="vh-100"
-            style="background-image: url(https://img.freepik.com/premium-vector/hand-drawn-cupcake-doodle-background-seamless-pattern_217204-180.jpg?w=2000);">
-            <div class="container py-5 h-10">
-                <div class="row d-flex justify-content-center align-items-center h-100">
-                    <div class="col col-lg-6 mb-4 mb-lg-0">
-                        <div class="card mb-3" style="border-radius: .5rem;">
-                            <div class="row g-0">
-                                <div class="col-md-4 gradient-custom text-center text-white"
-                                    style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
-                                    <img src="https://thumbs.dreamstime.com/b/%D0%B2%D0%B5%D0%BA%D1%82%D0%BE%D1%80-%D1%81%D0%BC%D0%B8-%D0%B7%D0%BD%D0%B0%D1%87%D0%BA%D0%B0-%D0%BF%D1%80%D0%BE%D1%84%D0%B8%D0%BB%D1%8F-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8F-%D0%BF%D0%BE-%D1%83%D0%BC%D0%BE%D0%BB%D1%87%D0%B0%D0%BD%D0%B8%D1%8E-%D1%81%D0%BE%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D0%B0%D0%B2%D0%B0%D1%82%D0%B0%D1%80-176194876.jpg"
-                                        alt="Avatar" class="img-fluid my-5" style="width: 150px;" />
+        <div class="container py-5 h-10">
+
+            <div class="card mb-4" style="border-radius: 0.5rem; width: 100%">
+
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="photoSelector"></label>
+                            <select class="form-control" id="photoSelector" onchange="select()">
+                                <option value="photo1" id="first">Photo 1</option>
+                                <option value="photo2" id="second">Photo 2</option>
+                                <option value="photo3" id="third">Photo 3</option>
+                                <option value="photo4" id="4">Photo 4</option>
+                            </select>
+                        </div>
+
+                        <div id="photoGallery">
+                            <div class="photo-container" id="photo1">
+                                <img class="user-photo" src="cook3.jpeg" alt="User Photo 1">
+                            </div>
+                            <div class="photo-container" id="photo2" style="display: none;">
+                                <img class="user-photo" src="cook1.avif" alt="User Photo 2">
+                            </div>
+                            <div class="photo-container" id="photo3" style="display: none;">
+                                <img class="user-photo" src="cook2.jpeg" alt="User Photo 4">
+                            </div>
+                            <div class="photo-container" id="photo4" style="display: none;">
+                                <img class="user-photo" src="cook4.jpeg" alt="User Photo 4">
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button id="saveChangesButton" class="btn btn-outline-danger mt-3"
+                                onclick="saveChanges()">Save
+                                Changes</button>
+                        </div>
+                        <br>
+
+
+                    </div>
 
 
 
 
-
+                    <div class="col-md-8">
+                        <!-- Карточка с Bootstrap стилями -->
+                        <div class="card-body p-4" style="background-color: #ffffff;">
+                            <h6 class="text-center" style="font-size: 30px;">Information</h6>
+                            <hr class="mt-0 mb-4" />
+                            <div class="row pt-1">
+                                <div class="col-6 mb-3">
+                                    <h6 style="font-size: 20px;">Name</h6>
+                                    <p class="text-muted" id="userName" style="font-size: 20px;">User's Name</p>
+                                    <h6 style="font-size: 20px;">Surname</h6>
+                                    <p class="text-muted" id="userSurname" style="font-size: 20px;">
+                                        User's Surname
+                                    </p>
                                 </div>
-
-                                <div class="col-md-8">
-                                    <div class="card-body p-4">
-                                        <h6>Information</h6>
-                                        <hr class="mt-0 mb-4">
-                                        <div class="row pt-1">
-                                            <div class="col-6 mb-3">
-                                                <h6>Email</h6>
-                                                <p class="text-muted" id="userEmail">You do not have an account</p>
-                                            </div>
-                                            <div class="col-6 mb-3" onclick="toggleVisibility()">
-                                                <h6>Password</h6>
-                                                <div style="background-color: blanchedalmond;">
-                                                    <p class="text-muted password" id="userPassword"
-                                                        style="visibility: hidden;">error</p>
-                                                </div>
-                                            </div>
-
+                                <div class="col-6 mb-3">
+                                    <h6 style="font-size: 20px;">Email</h6>
+                                    <p style="font-size: 20px;" class="text-muted" id="userEmail">
+                                        User's Email
+                                    </p>
+                                    <h6 style="font-size: 20px;">Date of Birth</h6>
+                                    <p style="font-size: 20px;" class="text-muted" id="userBirthdate">
+                                        User's bday
+                                    </p>
+                                    <div class="col-6 mb-3" onclick="toggleVisibility()">
+                                        <h6 style="font-size: 20px;">Password</h6>
+                                        <div style="background-color: blanchedalmond">
+                                            <p class="text-muted password" id="userPassword"
+                                                style="visibility: hidden; font-size: 20px">
+                                                User's Password
+                                            </p>
                                         </div>
-                                        <button onclick="logout()">Logout</button>
-
-                                        <script>
-                                            function toggleVisibility() {
-                                                var passwordElements = document.getElementsByClassName('password');
-                                                for (var i = 0; i < passwordElements.length; i++) {
-                                                    var passwordElement = passwordElements[i];
-                                                    if (passwordElement.style.visibility === 'hidden') {
-                                                        passwordElement.style.visibility = 'visible';
-                                                    } else {
-                                                        passwordElement.style.visibility = 'hidden';
-                                                    }
-                                                }
-                                            }
-                                    
-                                 
-                                    
-                                           
-
-                                            const queryString = window.location.search;
-                                            const urlParams = new URLSearchParams(queryString);
-                                            const userEmail = urlParams.get('email');
-                                            const userPassword = urlParams.get('password');
-                                        
-                                            if (userEmail && userPassword) {
-                                                document.getElementById('userEmail').textContent = userEmail || 'You do not have an account';
-                                                document.getElementById('userPassword').textContent = userPassword || 'error';
-                                                document.getElementById('userPassword').style.visibility = 'visible';
-                                            }
-                                        
-                                            function logout() {
-                                                localStorage.setItem("isLoggedIn", "false");
-                                                location.href = "index.html"; 
-                                            }
-
-                                            window.onload = function() {
-                                                var isLoggedIn = localStorage.getItem("isLoggedIn");
-                                                if (isLoggedIn === "true") {
-                                                  var userEmail = localStorage.getItem("userEmail");
-                                                  var userPassword = localStorage.getItem("userPassword");
-                                              
-                                                  document.getElementById('userEmail').textContent = userEmail || 'You do not have an account';
-                                                  document.getElementById('userPassword').textContent = userPassword || 'error';
-                                                  document.getElementById('userPassword').style.visibility = 'visible';
-                                                } else {
-                                                }
-                                              }
-                                              
-                        
-                                        </script>
-
                                     </div>
-
-
                                 </div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class=" btn btn-outline-danger" onclick="logout()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z" />
+                                    <path fill-rule="evenodd"
+                                        d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                                </svg>
                             </div>
                         </div>
                     </div>
@@ -211,7 +217,164 @@
             </div>
         </div>
     </div>
+    <div class="container py-5 h-10" style="  background-color: rgb(255, 255, 255);">
+        <div class="row">
+            <div class="col-sm-1">
+
+            </div>
+
+            <div class="col-sm-10">
+                <div id="purchaseData" style="  background-color: #f7f4ed;"></div>
+            </div>
+
+
+
+
+            <div class="col-sm-1">
+
+            </div>
+        </div>
     </div>
+
+
+
+    <script>
+        function toggleVisibility() {
+            var passwordElements =
+                document.getElementsByClassName("password");
+            for (var i = 0; i < passwordElements.length; i++) {
+                var passwordElement = passwordElements[i];
+                if (
+                    passwordElement.style.visibility === "hidden"
+                ) {
+                    passwordElement.style.visibility = "visible";
+                } else {
+                    passwordElement.style.visibility = "hidden";
+                }
+            }
+        }
+
+        window.onload = function () {
+            var isLoggedIn = localStorage.getItem("isLoggedIn");
+            if (isLoggedIn === "true") {
+                var userEmail = localStorage.getItem("userEmail");
+                var userPassword = localStorage.getItem("userPassword");
+                var userName = localStorage.getItem("userName");
+                var userSurname = localStorage.getItem("userSurname");
+                var userBirthdate = localStorage.getItem("userBirthdate");
+
+                // Display user details
+                document.getElementById("userName").textContent =
+                    userName || "User's Name";
+                document.getElementById("userSurname").textContent =
+                    userSurname || "User's Surname";
+                document.getElementById("userEmail").textContent =
+                    userEmail || "You do not have an account";
+                document.getElementById("userPassword").textContent =
+                    userPassword || "error";
+                document.getElementById("userPassword").style.visibility = "visible";
+                document.getElementById("userBirthdate").textContent =
+                    userBirthdate || "User's bday";
+            }
+        };
+        document.addEventListener("DOMContentLoaded", function () {
+            // Получение данных из localStorage
+            const purchaseData = JSON.parse(localStorage.getItem("purchaseData"));
+
+            if (purchaseData) {
+                // Используйте данные по вашему усмотрению
+                const cart = purchaseData.cart;
+                const total = purchaseData.total;
+                const timestamp = purchaseData.timestamp;
+                const formattedTimestamp = new Date(timestamp).toLocaleString();
+
+                // Отобразите данные на странице, например:
+                const purchaseDataDiv = document.getElementById("purchaseData");
+                purchaseDataDiv.innerHTML = `
+
+
+                    <h2 h2 style = " text-align: center " > Your purchase history </h2 >
+                        <hr>
+
+                            <p style="font-size: 20px; text-align: center "> Total: <strong>${total} KZT </strong></p>
+                            <ul style="font-size: 20px;">
+                                <p>Date:    <strong> ${formattedTimestamp} </strong></p>
+                                ${Object.keys(cart).map(productName => `<li> <p>Product name:  ${productName} x${cart[productName].quantity}</p> Price: ${cart[productName].total.toFixed(0)} KZT</li>  <br> <hr>`).join('')}
+                            </ul>`;
+
+            } 
+            }
+
+        );
+
+   
+
+        // Получение данных из LocalStorage при загрузке страницы
+        document.addEventListener('DOMContentLoaded', () => {
+            const purchaseDataDiv = document.getElementById('purchaseData');
+            const storedPurchaseHistory = localStorage.getItem('purchaseHistory');
+
+            if (storedPurchaseHistory) {
+                purchaseDataDiv.innerHTML = storedPurchaseHistory;
+            }
+        });
+        function logout() {
+            localStorage.setItem("isLoggedIn", "false");
+            location.href = "forms.html";
+        }
+
+        function previewImage(input) {
+            var preview = document.getElementById('preview');
+            preview.innerHTML = '';
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    var img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.className = 'img-thumbnail';
+                    preview.appendChild(img);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        function select() {
+            var selectedOption = document.getElementById("photoSelector").value;
+
+            // Hide all photos
+            document.getElementById("photo1").style.display = "none";
+            document.getElementById("photo2").style.display = "none";
+            document.getElementById("photo3").style.display = "none";
+            document.getElementById("photo4").style.display = "none";
+
+            document.getElementById(selectedOption).style.display = "block";
+        }
+
+        function saveChanges() {
+            var selectedPhoto = document.getElementById("photoSelector").value;
+            var storedUserDetails = JSON.parse(localStorage.getItem("userDetails")) || {};
+            storedUserDetails.selectedPhoto = selectedPhoto;
+            localStorage.setItem("userDetails", JSON.stringify(storedUserDetails));
+
+            alert("Changes saved!");
+        }
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var storedUserDetails = JSON.parse(localStorage.getItem("userDetails")) || {};
+            document.getElementById("photoSelector").value = storedUserDetails.selectedPhoto || "photo1";
+
+            select();
+        });
+
+
+    </script>
+
+
+
 </body>
 
 </html>
