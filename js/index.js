@@ -32,55 +32,62 @@ function findRecipe() {
 }
 
 function startTimerPrompt() {
-  const timeOption = prompt("Choose an option:\n1 - Seconds\n2 - Minutes");
+  var isLoggedIn = localStorage.getItem("isLoggedIn");
+  if (isLoggedIn === "true") {
+    const timeOption = prompt("Choose an option:\n1 - Seconds\n2 - Minutes");
 
-  if (timeOption === "1") {
-    const userSeconds = prompt("Enter the number of seconds:");
+    if (timeOption === "1") {
+      const userSeconds = prompt("Enter the number of seconds:");
 
-    if (userSeconds !== null) {
-      const totalSeconds = parseInt(userSeconds);
+      if (userSeconds !== null) {
+        const totalSeconds = parseInt(userSeconds);
 
-      if (!isNaN(totalSeconds) && totalSeconds > 0) {
-        const intervals = 2;
+        if (!isNaN(totalSeconds) && totalSeconds > 0) {
+          const intervals = 2;
 
-        for (let i = 0; i < intervals; i++) {
+          for (let i = 0; i < intervals; i++) {
+            setTimeout(function () {
+              alert(`Left: ${totalSeconds - i * (totalSeconds / intervals)} seconds`);
+            }, i * (totalSeconds / intervals) * 1000);
+          }
+
           setTimeout(function () {
-            alert(`Left: ${totalSeconds - i * (totalSeconds / intervals)} seconds`);
-          }, i * (totalSeconds / intervals) * 1000);
+            alert('Time is over!');
+          }, totalSeconds * 1000);
+        } else {
+          alert('The entered number of seconds is invalid.');
         }
-
-        setTimeout(function () {
-          alert('Time is over!');
-        }, totalSeconds * 1000);
-      } else {
-        alert('The entered number of seconds is invalid.');
       }
-    }
-  } else if (timeOption === "2") {
-    const userMinutes = prompt("Enter the number of minutes:");
+    } else if (timeOption === "2") {
+      const userMinutes = prompt("Enter the number of minutes:");
 
-    if (userMinutes !== null) {
-      const totalMinutes = parseInt(userMinutes);
+      if (userMinutes !== null) {
+        const totalMinutes = parseInt(userMinutes);
 
-      if (!isNaN(totalMinutes) && totalMinutes > 0) {
-        const totalSeconds = totalMinutes * 60;
-        const intervals = 2;
+        if (!isNaN(totalMinutes) && totalMinutes > 0) {
+          const totalSeconds = totalMinutes * 60;
+          const intervals = 2;
 
-        for (let i = 0; i < intervals; i++) {
+          for (let i = 0; i < intervals; i++) {
+            setTimeout(function () {
+              alert(`Left: ${totalSeconds - i * (totalSeconds / intervals)} seconds`);
+            }, i * (totalSeconds / intervals) * 1000);
+          }
+
           setTimeout(function () {
-            alert(`Left: ${totalSeconds - i * (totalSeconds / intervals)} seconds`);
-          }, i * (totalSeconds / intervals) * 1000);
+            alert('Time is over!');
+          }, totalSeconds * 1000);
+        } else {
+          alert('The entered number of minutes is invalid.');
         }
-
-        setTimeout(function () {
-          alert('Time is over!');
-        }, totalSeconds * 1000);
-      } else {
-        alert('The entered number of minutes is invalid.');
       }
+    } else {
+      alert('Invalid option. Please choose 1 for seconds or 2 for minutes.');
     }
   } else {
-    alert('Invalid option. Please choose 1 for seconds or 2 for minutes.');
+    alert("please log in or sign up.");
+    return;
+
   }
 }
 
@@ -130,13 +137,13 @@ function showMessages() {
 function goToProfile() {
   var isLoggedIn = localStorage.getItem("isLoggedIn");
   if (isLoggedIn === "true") {
-      var userEmail = localStorage.getItem("userEmail");
-      var userPassword = localStorage.getItem("userPassword");
-      window.location.href = 'user.html';
+    var userEmail = localStorage.getItem("userEmail");
+    var userPassword = localStorage.getItem("userPassword");
+    window.location.href = 'user.html';
   } else {
 
     window.location.href = 'forms.html';
-}
+  }
 }
 
 
