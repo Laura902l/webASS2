@@ -118,12 +118,14 @@ function validateForm() {
   if (isUserFound) {
     localStorage.setItem("isLoggedIn", "true");
     localStorage.setItem("userEmail", email);
+   
 
     // Set other user details
 
     localStorage.setItem("userName", userAccounts.find(account => account.email === email).name);
     localStorage.setItem("userSurname", userAccounts.find(account => account.email === email).surname);
     localStorage.setItem("userBirthdate", userAccounts.find(account => account.email === email).birthdate);
+    localStorage.setItem("userPassword", userAccounts.find(account => account.email === email).password);
 
     window.location.href = 'user.html';
   } else if (email === 'hello@gmail.com' && password === '123455') {
