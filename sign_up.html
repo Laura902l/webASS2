@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,8 +28,7 @@
   <title>Sign in</title>
 </head>
 
-<body class="bg-image"
-  style="background-image: url(https://img.freepik.com/premium-vector/hand-drawn-cupcake-doodle-background-seamless-pattern_217204-180.jpg?w=2000);">
+<body class="bg-image">
   <div style="background-color: #F7F4ED;">
     <div class="container-fluid">
       <div class="row justify-content-center align-items-center ">
@@ -40,7 +40,7 @@
       </div>
     </div>
   </div>
-  <div class="container border mt-5 " style="background-color: #F7F4ED; width:50%">
+  <div class="container border mt-5 " style="background-color: #F7F4ED; width:50%; border-radius:6%;">
     <br>
     <h2 class="mt-2 text-center">Sign up</h2>
 
@@ -50,15 +50,36 @@
     <form id="registrationForm" action="/action_page.php">
       <div class="form-group mt-4">
         <div class="input-group">
-          <input type="email" class="form-control text-center" id="email" placeholder="Enter email" name="email" required>
+          <input type="name" class="form-control text-center" id="name" placeholder="Enter your name" name="name"
+            required>
         </div>
       </div>
       <div class="form-group mt-4">
         <div class="input-group">
-          <input type="password" class="form-control text-center" id="pwd" placeholder="Enter password" name="password" required>
+          <input type="surname" class="form-control text-center" id="surname" placeholder="Enter your surname"
+            name="surname" required>
+        </div>
+      </div>
+      <div class="form-group mt-4">
+        <div class="input-group">
+          <input type="email" class="form-control text-center" id="email" placeholder="Enter email" name="email"
+            required>
+        </div>
+      </div>
+      <div class="form-group mt-4">
+        <div class="input-group">
+          <input type="date" class="form-control text-center" id="birthdate" placeholder="Enter date of birth"
+            name="birthdate" required>
+        </div>
+      </div>
+      <div class="form-group mt-4">
+        <div class="input-group">
+          <input type="password" class="form-control text-center" id="pwd" placeholder="Enter password" name="password"
+            required>
           <div class="input-group-append mt-5">
             <div class="mt-4 text-end" type="button" onclick="togglePasswordVisibility(document.getElementById('pwd'))">
-              Hide Password</div>
+              <span id="passwordVisibilityToggle">Show Password</span>
+            </div>
           </div>
         </div>
       </div>
@@ -69,7 +90,7 @@
         <li id="uppercase-req">One uppercase character</li>
         <li id="specialchar-req">One special character (@, %, $, etc.)</li>
       </ul>
-      <div class="text-center"><button class="btn btn-dark mt-2" onclick="saveDataAndRedirect()">Submit</button></div>
+      <div class="text-center"><button class="btn btn-dark mt-2">Submit</button></div>
       <ul class="pager">
         <li class="text-center"><a href="index.html">Home</a></li>
       </ul>
@@ -79,40 +100,41 @@
 
     document.getElementById('registrationForm').addEventListener('submit', function (event) {
       event.preventDefault();
-  
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('pwd').value;
-  
 
-      const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-  
+      const name = document.getElementById('name').value;
+      const surname = document.getElementById('surname').value;
+      const email = document.getElementById('email').value;
+      const birthdate = document.getElementById('birthdate').value;
+      const password = document.getElementById('pwd').value;
+     
+
       const lowercaseReq = document.getElementById('lowercase-req');
       const uppercaseReq = document.getElementById('uppercase-req');
       const specialcharReq = document.getElementById('specialchar-req');
       const lengthReq = document.getElementById('length-req');
-  
+
       const userAccounts = JSON.parse(localStorage.getItem('userAccounts')) || [];
       let isValid = true;
-  
+
       if (!/[a-z]/.test(password)) {
-          isValid = false;
-          lowercaseReq.style.color = 'red';
+        isValid = false;
+        lowercaseReq.style.color = 'red';
       } else {
-          lowercaseReq.style.color = 'green';
+        lowercaseReq.style.color = 'green';
       }
-  
+
       if (!/[A-Z]/.test(password)) {
-          isValid = false;
-          uppercaseReq.style.color = 'red';
+        isValid = false;
+        uppercaseReq.style.color = 'red';
       } else {
-          uppercaseReq.style.color = 'green';
+        uppercaseReq.style.color = 'green';
       }
-  
+
       if (!/[@%$]/.test(password)) {
-          isValid = false;
-          specialcharReq.style.color = 'red';
+        isValid = false;
+        specialcharReq.style.color = 'red';
       } else {
-          specialcharReq.style.color = 'green';
+        specialcharReq.style.color = 'green';
       }
       if (password.length < 8) {
         isValid = false;
@@ -121,26 +143,50 @@
       else {
         lengthReq.style.color = 'green';
       }
-      
-  
-     
+
+
+
       if (isValid) {
         const userAccounts = JSON.parse(localStorage.getItem('userAccounts')) || [];
-        const newUser = { email, password };
+        const existingUser = userAccounts.find(user => user.email === email);
+        if (existingUser) {
+            alert('An account with this email already exists. Please choose another email.');
+            return; 
+        }
+        const newUser = { email, password, name, surname, birthdate }; 
         userAccounts.push(newUser);
         localStorage.setItem('userAccounts', JSON.stringify(userAccounts));
-
-        localStorage.setItem('currentUser', JSON.stringify(newUser));
-
-        alert('Your account has been successfully signed up');
-
-        window.location.href = 'forms.html';
-      }
-  });
-  
     
+        localStorage.setItem('currentUser', JSON.stringify(newUser));
+        
+    
+        alert('Your account has been successfully signed up');
+    
+    
+        localStorage.setItem('isLoggedIn', 'true');
+        localStorage.setItem('userName', newUser.name);
+        localStorage.setItem('userSurname', newUser.surname);
+        localStorage.setItem('userBirthdate', newUser.birthdate);
+        
+    
+        window.location.href = 'forms.html';
+    }
+    
+    });
+    function togglePasswordVisibility(passwordInput) {
+      var passwordType = passwordInput.getAttribute('type');
+      if (passwordType === 'password') {
+        passwordInput.setAttribute('type', 'text');
+        document.getElementById('passwordVisibilityToggle').textContent = 'Hide Password';
+      } else {
+        passwordInput.setAttribute('type', 'password');
+        document.getElementById('passwordVisibilityToggle').textContent = 'Show Password';
+      }
+    }
+
+
   </script>
-  <script scr="form.js"></script>
+
 </body>
 
 </html>
