@@ -208,13 +208,36 @@ $('.quantity').each(function () {
 
 
 
+// function toggleFormVisibility() {
+//     var form = document.getElementById('order-form');
+//     var button = document.getElementById('button');
+//     var cartTotalElement = document.getElementById("cart-total");
+//     var total = parseFloat(cartTotalElement.textContent);
+
+//     if (!cartTotalElement || isNaN(total) || total === 0) {
+//         alert("The Basket is empty.");
+//         return;
+//     } else {
+//         if (form.style.display === 'none' || form.style.display === '') {
+//             form.style.display = 'block';
+//             button.style.display = 'none';
+//         } else {
+//             form.style.display = 'none';
+//             button.style.display = 'block';
+//         }
+//     }
+// }
 function toggleFormVisibility() {
     var form = document.getElementById('order-form');
     var button = document.getElementById('button');
     var cartTotalElement = document.getElementById("cart-total");
     var total = parseFloat(cartTotalElement.textContent);
+    var isLoggedIn = localStorage.getItem("isLoggedIn");
 
-    if (!cartTotalElement || isNaN(total) || total === 0) {
+    if (isLoggedIn === "false") {
+        alert("You should log in or log out.");
+        return; 
+    } else if (!cartTotalElement || isNaN(total) || total === 0) {
         alert("The Basket is empty.");
         return;
     } else {
@@ -289,6 +312,14 @@ function showThankYouAlert() {
         if (input === "1") {
             const thankYouMessage = "Thanks for your purchase!";
             alert(thankYouMessage);
+            
+            window.localStorage.setItem("purchaseData", JSON.stringify({
+                timestamp: Date.now(),
+                cart: cart,
+                total: total
+            }));
+
+       
             localStorage.removeItem("cart");
             localStorage.removeItem("total");
 
@@ -307,7 +338,7 @@ function showThankYouAlert() {
                 updateQuantityInput($(this), 0);
             });
 
-
+            window.location.href = "user.html";
       
         }
     }
@@ -354,12 +385,39 @@ var x = setInterval(function () {
 
 
 function goToProfile() {
+  var isLoggedIn = localStorage.getItem("isLoggedIn");
+  if (isLoggedIn === "true") {
+      var userEmail = localStorage.getItem("userEmail");
+      var userPassword = localStorage.getItem("userPassword");
+      window.location.href = 'user.html';
+  } else {
+
+    window.location.href = 'forms.html';
+}
+}
+
+window.onload = function () {
     var isLoggedIn = localStorage.getItem("isLoggedIn");
     if (isLoggedIn === "true") {
         var userEmail = localStorage.getItem("userEmail");
         var userPassword = localStorage.getItem("userPassword");
-        window.location.href = 'user.html';
-    } else {
-        alert("You are not logged in. Please log in or create an account.");
+        var userName = localStorage.getItem("userName");
+        var userSurname = localStorage.getItem("userSurname");
+        var userBirthdate = localStorage.getItem("userBirthdate");
+
+        // Store user details in local storage
+        var userDetails = {
+            userName: userName || "User's Name",
+            userSurname: userSurname || "User's Surname",
+            userEmail: userEmail || "You do not have an account",
+            userPassword: userPassword || "error",
+            userBirthdate: userBirthdate || "User's bday"
+        };
+
+        localStorage.setItem("userDetails", JSON.stringify(userDetails));
     }
-  }
+};
+document.addEventListener("DOMContentLoaded", function () {
+    var storedUserDetails = JSON.parse(localStorage.getItem("userDetails")) || {};
+    document.getElementById("displayName").textContent = storedUserDetails.userName;
+});
