@@ -52,8 +52,8 @@
         </div>
     </div>
 
-    <!-- Navigation bar -->
-    <div class="container-fluid ">
+       <!-- Navigation bar -->
+       <div class="container-fluid ">
 
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <!-- Home -->
@@ -67,9 +67,9 @@
             </a>
 
             <!-- login -->
-            <a class="navbar-brand  px-4" href="forms.html">
+            <a class="navbar-brand  px-4" onclick="goToProfile()" >
                 <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-person"
-                    viewBox="0 0 16 16">
+                    viewBox="0 0 16 16" >
                     <path
                         d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
                 </svg>
@@ -81,6 +81,9 @@
                 <a class="dropdown-item text-primary" href="index.html">About us</a>
                 <a class="dropdown-item text-primary" href="#c2">Contact Info</a>
                 <a class="dropdown-item text-primary" href="#c2">Important link</a>
+                <div id="userSection" class="dropdown-item" >
+                    <div type="button" id="profileButton" onclick="goToProfile()">Profile</div>
+                </div>
             </div>
 
             <!-- button navbar-toggler -->
@@ -94,7 +97,8 @@
                 <ul class="navbar-nav">
                     <!-- Breakfast -->
                     <li class="nav-item active px-4">
-                        <a class="nav-link  " href="breakfast.html">Breakfast <span class="sr-only">(current)</span></a>
+                        <a class="nav-link  " href="breakfast.html">Breakfast <span
+                                class="sr-only">(current)</span></a>
                     </li>
                     <!-- Cake -->
                     <li class="nav-item px-4">
@@ -114,9 +118,7 @@
                             <a class="dropdown-item" href="index.html">About us</a>
                             <a class="dropdown-item" href="#c2">Contact Info</a>
                             <a class="dropdown-item" href="#c2">Important link</a>
-                            <div id="userSection" class="dropdown-item">
-                                <div type="button" id="profileButton" onclick="goToProfile()">Profile</div>
-                            </div>
+                           
                         </div>
                     </li>
 
@@ -216,6 +218,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6 mb-3">
+                                <div id="displayName"></div>
                                 <label for="name" class="form-label">Name</label>
                                 <input type="text" class="form-control" id="name" name="name" placeholder="Name"
                                     aria-label="Name" required>
@@ -241,6 +244,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-6 mb-3">
+                                    
                                     <label for="card" class="form-label">Card Number</label>
                                     <input type="text" class="form-control" id="card" name="card"
                                         placeholder="Card Number" aria-label="Card Number" required>
@@ -299,6 +303,7 @@
     </div>
 
     <br>
+ 
 
 
     <!-- Welcome -->
