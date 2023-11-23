@@ -134,8 +134,9 @@ function goToProfile() {
       var userPassword = localStorage.getItem("userPassword");
       window.location.href = 'user.html';
   } else {
-      alert("You are not logged in. Please log in or create an account.");
-  }
+
+    window.location.href = 'forms.html';
+}
 }
 
 
