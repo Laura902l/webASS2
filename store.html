@@ -214,11 +214,13 @@
 
                 <!-- Form Section -->
                 <form id="order-form" style="display: none;">
+                    <p style="font-size: 20px;">Hello <span  id="displayName"></span></p>
+
                     <!-- Name and Phone Fields -->
-                    <div class="container">
+                    <!-- <div class="container">
                         <div class="row">
                             <div class="col-md-6 mb-3">
-                                <div id="displayName"></div>
+                              
                                 <label for="name" class="form-label">Name</label>
                                 <input type="text" class="form-control" id="name" name="name" placeholder="Name"
                                     aria-label="Name" required>
@@ -229,7 +231,7 @@
                                     aria-label="Phone" required>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- Dropdown for Pickup/Delivery -->
                     <select id="pickup-delivery" class="form-select" name="pickup-delivery"
@@ -753,8 +755,13 @@
         </div>
     </div>
 
-
-
+<br>
+<br>
+    <div class="col-sm-12">
+        <div id="purchaseData" style="  background-color: #f7f4ed;"></div>
+    </div>
+    <br>
+    <br>
     <!-- conclusion part -->
     <hr style="border: 1.5px solid#587493">
     <div class="container-fluid">
@@ -916,6 +923,21 @@
             </div>
         </div>
     </div>
+
+
+
+    <div>
+  
+        <p id="displayName"></p>
+  
+    </div>
+
+
+    <div>
+        <h2>Purchase History</h2>
+        <ul id="purchaseHistory"></ul>
+    </div>
+
 
     <!-- footer -->
     <footer class="bg-white text-center">
