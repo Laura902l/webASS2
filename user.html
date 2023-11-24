@@ -35,6 +35,41 @@
             height: auto;
 
         }
+
+        .comment {
+            margin-bottom: 15px;
+        }
+
+        .comment-info {
+            color: #acacac;
+            font-size: 20px;
+        }
+
+        .reply-btn {
+            margin-top: 10px;
+        }
+
+        .reply-form {
+            margin-top: 10px;
+            display: none;
+        }
+
+        .reply-info {
+            color: #acacac;
+            font-size: 18px;
+        }
+
+        .reply {
+            margin-left: 50px;
+            font-size: 20px;
+        }
+
+        .hr {
+            border-top: 1px solid #4d4c4c;
+            margin-top: 15px;
+            width: 100%;
+            clear: both;
+        }
     </style>
 </head>
 
@@ -217,28 +252,72 @@
             </div>
         </div>
     </div>
-    <div class="container py-5 h-10" style="  background-color: rgb(255, 255, 255);">
+
+
+
+    <!-- Comment Section -->
+    <section class="container mt-4" style="background-color: #ffffff; border-radius: 8%;">
         <div class="row">
-            <div class="col-sm-1">
+            <div class="col-md-12">
+                <div class="panel">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-sm-1">
 
-            </div>
+                            </div>
+                            <div class="col-sm-10">
+                                <br>
+                                <h2 class="text-center">Discussion</h2>
+                                <hr>
+                                <br>
+                                <textarea id="commentInput" class="form-control" rows="2"
+                                    placeholder="Your feedback or question awaits here..."></textarea>
 
-            <div class="col-sm-10">
-                <div id="purchaseData" style="  background-color: #f7f4ed;"></div>
-            </div>
+                                <div class="mar-top clearfix">
+                                    <br>
+                                    <button class="btn btn-sm btn-warning pull-right" onclick="submitComment()">
+
+                                        <i class="fa fa-pencil fa-fw"></i> Add
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-1">
+
+                    </div>
+                    <div class="col-sm-10">
+                        <div id="commentsContainer">
 
 
+                            <div id="replyContainer">
+                                <div class="hr"></div>
 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
 
-            <div class="col-sm-1">
+                    </div>
+
+                </div>
 
             </div>
         </div>
-    </div>
+    </section>
+
 
 
 
     <script>
+        // check
         function toggleVisibility() {
             var passwordElements = document.getElementsByClassName("password");
             for (var i = 0; i < passwordElements.length; i++) {
@@ -250,27 +329,21 @@
                 }
             }
         }
-        
 
-       
+
+
         function login() {
-            // Get the entered email and password from the login form
             var enteredEmail = document.getElementById("loginEmail").value;
-              //var enteredPassword = document.getElementById("loginPassword").value;
-            
-        
-            // Check if the entered email exists in local storage
             var storedUserEmail = localStorage.getItem("userEmail");
-             // var password = localStorage.getItem("password");
-            
-        
+
+
             if (storedUserEmail === enteredEmail) {
-                // Email and password match, retrieve and display user information
+                // Email and password information
                 var storedUserName = localStorage.getItem("userName");
                 var storedUserSurname = localStorage.getItem("userSurname");
                 var storedUserBirthdate = localStorage.getItem("userBirthdate");
                 var storedUserPassword = localStorage.getItem("userPassword");
-        
+
                 // Display user details
                 document.getElementById("userName").textContent = storedUserName || "User's Name";
                 document.getElementById("userSurname").textContent = storedUserSurname || "User's Surname";
@@ -278,16 +351,15 @@
                 document.getElementById("userPassword").textContent = password || "error";
                 document.getElementById("userPassword").style.visibility = "visible";
                 document.getElementById("userBirthdate").textContent = storedUserBirthdate || "User's bday";
-        
-               
+
+
                 localStorage.setItem("isLoggedIn", "true");
             } else {
-                
                 alert("Invalid email or password. Please try again.");
-               
+
             }
         }
-        
+
 
         window.onload = function () {
             var isLoggedIn = localStorage.getItem("isLoggedIn");
@@ -309,14 +381,8 @@
 
             }
         };
-    
-   
 
-        
 
-   
-
-        // Получение данных из LocalStorage при загрузке страницы
         document.addEventListener('DOMContentLoaded', () => {
             const purchaseDataDiv = document.getElementById('purchaseData');
             const storedPurchaseHistory = localStorage.getItem('purchaseHistory');
@@ -376,7 +442,154 @@
 
             select();
         });
-     
+
+        function getLocalStorageItem(key) {
+            return localStorage.getItem(key);
+        }
+
+        function setLocalStorageItem(key, value) {
+            localStorage.setItem(key, value);
+        }
+
+        function getUserEmail() {
+            return getLocalStorageItem('userEmail') || 'example@example.com';
+        }
+
+        function handleFileUpload(file) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                const base64Image = e.target.result;
+
+                console.log('Base64 Image:', base64Image);
+            };
+
+            reader.readAsDataURL(file);
+        }
+
+        function submitComment() {
+            const commentText = document.getElementById('commentInput').value.trim();
+
+            const userEmail = getUserEmail();
+
+            if (commentText !== '') {
+                const commentsKey = 'comments';
+                const existingComments = JSON.parse(getLocalStorageItem(commentsKey)) || [];
+
+                const comment = {
+                    text: commentText,
+                    user: userEmail,
+                    time: new Date().toLocaleString(),
+                    photo: null,
+                    replies: []
+                };
+
+
+
+                existingComments.push(comment);
+                setLocalStorageItem(commentsKey, JSON.stringify(existingComments));
+
+                document.getElementById('commentInput').value = '';
+                displayComments();
+                console.log('Comment added successfully:', comment);
+            } else {
+                alert('Please enter a comment before submitting.');
+            }
+        }
+
+        function toggleReplyForm(button) {
+
+            const replyForm = button.nextElementSibling;
+            replyForm.style.display = replyForm.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function submitReply(commentIndex) {
+            const replyForm = document.getElementById(`replyForm_${commentIndex}`);
+            const replyText = replyForm.querySelector('textarea').value.trim();
+
+            if (replyText !== '') {
+                const commentsKey = 'comments';
+                const existingComments = JSON.parse(getLocalStorageItem(commentsKey)) || [];
+                const userEmail = getUserEmail();
+
+                if (existingComments[commentIndex] && existingComments[commentIndex].replies) {
+                    const reply = {
+                        text: replyText,
+                        user: userEmail,
+                        time: new Date().toLocaleString()
+                    };
+
+                    existingComments[commentIndex].replies.push(reply);
+                    setLocalStorageItem(commentsKey, JSON.stringify(existingComments));
+
+                    replyForm.querySelector('textarea').value = '';
+                    displayComments();
+                } else {
+                    console.error('Error adding reply: existingComments or replies is undefined.');
+                }
+            } else {
+                alert('Please enter your answer before submitting.');
+            }
+        }
+
+
+        function displayComments() {
+            const commentsKey = 'comments';
+            const existingComments = JSON.parse(getLocalStorageItem(commentsKey)) || [];
+            const commentsContainer = document.getElementById('commentsContainer');
+            const replyContainer = document.getElementById('replyContainer');
+
+            commentsContainer.innerHTML = '';
+
+            existingComments.forEach(function (comment, commentIndex) {
+                const commentElement = document.createElement('div');
+                commentElement.className = 'comment';
+
+                commentElement.innerHTML = `
+        <p style="font-size:20px;">${comment.text}</p>
+        <div class="comment-info">
+            <span style="font-size:18px;">${comment.user}</span> | <span style="font-size:18px">${comment.time}</span>
+        </div>
+       
+        <button class="btn btn-sm btn-warning reply-btn" onclick="toggleReplyForm(this)">
+            Answer
+        </button>
+        <div class="reply-form"  id="replyForm_${commentIndex}">
+            <textarea class="form-control" rows="2" placeholder="Your Answer"></textarea>
+            <button class="btn btn-sm btn-primary"  onclick="submitReply(${commentIndex})">
+                Send reply
+            </button>
+        </div>
+        <hr class="hr"> 
+    `;
+
+
+                if (comment.replies && comment.replies.length > 0) {
+                    const repliesContainer = document.createElement('div');
+                    repliesContainer.className = 'replies-container';
+
+                    comment.replies.forEach(function (reply) {
+                        const replyElement = document.createElement('div');
+                        replyElement.className = 'reply';
+
+                        replyElement.innerHTML = `
+                            <p>${reply.text}</p>
+                            <div class="reply-info">
+                                <span>${reply.user}</span> | <span>${reply.time}</span>
+                                <hr class="hr"> 
+                            </div>
+                        `;
+
+                        repliesContainer.appendChild(replyElement);
+                    });
+                    commentElement.appendChild(repliesContainer);
+                }
+                commentsContainer.appendChild(commentElement);
+            });
+
+        }
+
+        displayComments();
 
     </script>
 
