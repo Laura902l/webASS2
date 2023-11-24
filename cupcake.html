@@ -9,6 +9,7 @@
 
   <!-- title -->
   <title>cuisine</title>
+  <link rel="stylesheet" href="breakfast.css">
   <!-- favicon -->
   <link rel="icon" href="favicon.ico">
   <!-- font -->
@@ -29,8 +30,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-
-
+  
 </head>
 
 <body>
@@ -45,91 +45,88 @@
     </div>
   </div>
 
-       <!-- Navigation bar -->
-       <div class="container-fluid ">
+  <!-- Navigation bar -->
+  <div class="container-fluid ">
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-white">
-            <!-- Home -->
-            <a class="navbar-brand px-4 ml-5" href="index.html">
-                Home
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" fill="currentColor" class="bi bi-house"
-                    viewBox="0 0 16 16">
-                    <path
-                        d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z" />
-                </svg>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <!-- Home -->
+      <a class="navbar-brand px-4 ml-5" href="index.html">
+        Home
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" fill="currentColor" class="bi bi-house"
+          viewBox="0 0 16 16">
+          <path
+            d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z" />
+        </svg>
+      </a>
+
+      <!-- login -->
+      <a class="navbar-brand  px-4" onclick="goToProfile()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-person"
+          viewBox="0 0 16 16">
+          <path
+            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+        </svg>
+      </a>
+
+      <!-- dropdown -->
+      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuL">
+        <a class="dropdown-item text-primary" href="index.html">About us</a>
+        <a class="dropdown-item text-primary" href="#c2">Contact Info</a>
+        <a class="dropdown-item text-primary" href="#c2">Important link</a>
+        <div id="userSection" class="dropdown-item">
+          <div type="button" id="profileButton" onclick="goToProfile()">Profile</div>
+        </div>
+      </div>
+
+      <!-- button navbar-toggler -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+
+        <ul class="navbar-nav">
+          <!-- Breakfast -->
+          <li class="nav-item active px-4">
+            <a class="nav-link  " href="breakfast.html">Breakfast <span class="sr-only">(current)</span></a>
+          </li>
+          <!-- Cake -->
+          <li class="nav-item px-4">
+            <a class="nav-link " href="cake.html">Cake</a>
+          </li>
+          <!-- Cupcake -->
+          <li class="nav-item px-4 ">
+            <a class="nav-link " href="cupcake.html">Cupcake</a>
+          </li>
+          <!-- More options -->
+          <li class="nav-item dropdown px-4">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              More
+            </a>
+            <div class="dropdown-menu text-muted" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="index.html">About us</a>
+              <a class="dropdown-item" href="#c2">Contact Info</a>
+              <a class="dropdown-item" href="#c2">Important link</a>
+
+            </div>
+          </li>
+
+          <li class="nav-item dropdown px-4">
+            <a class="nav-link" href="store.html">
+              Shop <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shop"
+                viewBox="0 0 16 16">
+                <path
+                  d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z" />
+              </svg>
             </a>
 
-            <!-- login -->
-            <a class="navbar-brand  px-4" onclick="goToProfile()" >
-                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-person"
-                    viewBox="0 0 16 16" >
-                    <path
-                        d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
-                </svg>
-            </a>
+          </li>
+        </ul>
+      </div>
 
-
-            <!-- dropdown -->
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuL">
-                <a class="dropdown-item text-primary" href="index.html">About us</a>
-                <a class="dropdown-item text-primary" href="#c2">Contact Info</a>
-                <a class="dropdown-item text-primary" href="#c2">Important link</a>
-                <div id="userSection" class="dropdown-item" >
-                    <div type="button" id="profileButton" onclick="goToProfile()">Profile</div>
-                </div>
-            </div>
-
-            <!-- button navbar-toggler -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-
-                <ul class="navbar-nav">
-                    <!-- Breakfast -->
-                    <li class="nav-item active px-4">
-                        <a class="nav-link  " href="breakfast.html">Breakfast <span
-                                class="sr-only">(current)</span></a>
-                    </li>
-                    <!-- Cake -->
-                    <li class="nav-item px-4">
-                        <a class="nav-link " href="cake.html">Cake</a>
-                    </li>
-                    <!-- Cupcake -->
-                    <li class="nav-item px-4 ">
-                        <a class="nav-link " href="cupcake.html">Cupcake</a>
-                    </li>
-                    <!-- More options -->
-                    <li class="nav-item dropdown px-4">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            More
-                        </a>
-                        <div class="dropdown-menu text-muted" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="index.html">About us</a>
-                            <a class="dropdown-item" href="#c2">Contact Info</a>
-                            <a class="dropdown-item" href="#c2">Important link</a>
-                           
-                        </div>
-                    </li>
-
-
-                    <li class="nav-item dropdown px-4">
-                        <a class="nav-link" href="store.html">
-                            Shop <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-shop" viewBox="0 0 16 16">
-                                <path
-                                    d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z" />
-                            </svg>
-                        </a>
-
-                    </li>
-                </ul>
-            </div>
-
-        </nav>
+    </nav>
 
     <!-- Lemon-Almond Muffins -->
     <div class="container">
@@ -147,10 +144,10 @@
             Sprinkle with turbinado sugar before baking and top with nutty toasted almonds for a sparkling, crunchy
             finish.
           </p>
+         
         </div>
       </div>
     </div>
-
 
 
     <!-- Ingredients Lemon-Almond Muffins -->
@@ -192,11 +189,9 @@
 
           </ul>
 
-
         </div>
         <div class="col-sm-1 "></div>
         <div class="col-sm-8 ">
-
 
           <h3 style="display: inline-block">Directions</h3>
           <div class="btn btn-dark ml-2" style="float: right;" onclick="startTimerPrompt()">Set a Timer</div>
@@ -238,7 +233,7 @@
             thick). Using spoon, drizzle glaze across cooled muffins.
           </p>
           <h5 id="timer"></h5>
-          
+
 
         </div>
       </div>
@@ -259,7 +254,7 @@
       </div>
     </div>
     <hr style="border: 1.5px solid#587493">
-    <!-- -	Create a basic image slider with forward and backward navigation buttons. -->
+    <!-- -  Create a basic image slider with forward and backward navigation buttons. -->
     <div class="splide">
       <div class="splide__track">
         <ul class="splide__list">
@@ -322,7 +317,7 @@
                 </div>
             </div>
         
-        <p id="c2"></p>
+        <p id=" c2"></p>
           <!-- accordion -->
           <hr style="border: 1.5px solid#587493">
           <div class="content">
@@ -407,12 +402,12 @@
                     </div>
                   </div>
                 </div>
+        
                 <footer class="bg-white text-center">
                   <div class="text-center p-3">
                     © 2023 Cuisine - All rights reserved. Privacy Policy | Terms of Use
                   </div>
                 </footer>
-
 
                 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
                 <script src="js/index.js"></script>
