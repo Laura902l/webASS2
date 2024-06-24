@@ -7,17 +7,21 @@ Laura Kazikhanova
 
 This repository contains the final exam project for the course, where I have created a Cuisine Website. The website showcases various recipes, cooking tips, and culinary delights from around the world.
 
-## Project Link
+## Project Links
 
-You can visit the website at: [Cuisine Website](https://laura902l.github.io/webASS2/index.html)
+- **Website**: [Cuisine Website](https://laura902l.github.io/webASS2/index.html)
+- **Admin Panel**: [admin.html](admin.html)
+- **Recipes**:
+  - [Breakfast Recipes](breakfast.html)
+  - [Cake Recipes](cake.html)
+  - [Cupcake Recipes](cupcake.html)
+  - [Store](store.html)
+- **User Interactions**:
+  - [Forms](forms.html)
+  - [User Profile](user.html)
+  - [Sign Up](sign_up.html)
 
-## Features
 
-- **Home Page**: An overview of the website with featured recipes and articles.
-- **Recipe Section**: A collection of recipes categorized by cuisine types.
-- **Cooking Tips**: Helpful tips and tricks for cooking enthusiasts.
-- **About Us**: Information about the creator and the purpose of the website.
-- **Contact Page**: A form for visitors to get in touch with the creator.
 
 ## Usage
 
